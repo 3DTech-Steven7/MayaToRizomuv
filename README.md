@@ -1,7 +1,7 @@
-##MayaToRizomUV是什么?
+## MayaToRizomUV是什么?
 这是一个能实时在RizomUV与Maya间分UV的工具。
 
-##Features - 特性
+## Features - 特性
 
 * 方便的`交互式分UV`功能
 * 工具省去相互导入导出的操作，`快捷高效`
@@ -25,8 +25,8 @@
 3. 重开Maya后找到在Windows-Setting/Perferences中的Plug-in Manager，搜索MayaToRizomuv.py插件点击Loaded进行使用
 
 ## Usage - 用法
-######* 具体在B站搜索mayatorizomuv
-###第一次使用
+###### 具体在B站搜索mayatorizomuv
+### 第一次使用
 1. 点击Edit-Preferences
 2. 点击...打开RizomUV.exe启动文件选择
 3. 设置完毕后点击Ok
@@ -35,27 +35,27 @@
 5. 点击后启动程序即可分UV
 6. 在需要传回maya时点击Pull即可
 
-###UVTool
+### UVTool
 1. 使用AutoCut可以自动切割模型UVShell，如果在Selection Mode的模式下则是在选择的Shell中切割
 
-###MayaTool
-#####Select Similar
+### MayaTool
+##### Select Similar
 * 选择相同的物体
  
-#####Transfer SectionUV
+##### Transfer SectionUV
 * 对选择的物体进行UV传递，仅作用于相同拓扑###Select Similar
 
-#####LiveLink
+##### LiveLink
 * 开启即可使用实时分UV
 
-#####Scrpit
+##### Scrpit
 * 可以使用自定义脚本进行自动化处理
 如fullAuto("pSphere*")
 参照maya的cmd的语法使用
 
 
 ## Changelog - 更新日志
-######V2021.4.10.02 版本内容更新
+###### V2021.4.10.02 版本内容更新
 * 更新支持Maya2022,并且向下兼容至Maya2014
 * 实时链接LiveLink功能优化，提高稳定性
 * 修复存在命名相同物体无法传递的BUG
