@@ -83,10 +83,10 @@
 * 用户帮助:https://www.jianshu.com/p/000663862bec
 * 工具演示:https://www.jianshu.com/p/bcbdc83c1a65
 
-##Donor developer - 捐助开发者
+## Donor developer - 捐助开发者
 在兴趣的驱动下,写一个`免费`的东西，有欣喜，也还有汗水，希望你喜欢我的作品，同时也能支持一下。
 
-##Authors and acknowledgment - 贡献者和感谢
+## Authors and acknowledgment - 贡献者和感谢
 感谢以下,排名不分先后
 
 * 余则成
@@ -99,5 +99,5 @@
 
 ## License - 版权信息
 该项目签署了GNU General Public License v3.0 授权许可，详情请参阅 LICENSE.md
-###关于作者
+### 关于作者
 Steven7
