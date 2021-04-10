@@ -109,6 +109,7 @@
 * 最新更新:https://www.jianshu.com/p/d82f2b21b05a
 * 用户帮助:https://www.jianshu.com/p/000663862bec
 * 工具演示:https://www.jianshu.com/p/bcbdc83c1a65
+* GitHub:https://github.com/3DTech-Steven7/MayaToRizomuv
 
 ## Donor developer - 捐助开发者
 在兴趣的驱动下,写一个`免费`的东西，有欣喜，也还有汗水，希望你喜欢我的作品，同时也能支持一下。
