@@ -1,0 +1,161 @@
+<html lang="en"><head>
+    <meta charset="UTF-8">
+    <title></title>
+<style class="mpa-style-fix ImageGatherer">.FotorFrame{position:fixed!important}</style><style id="system" type="text/css">h1,h2,h3,h4,h5,h6,p,blockquote {    margin: 0;    padding: 0;}body {    font-family: "Helvetica Neue", Helvetica, "Hiragino Sans GB", Arial, sans-serif;    font-size: 13px;    line-height: 18px;    color: #737373;    margin: 10px 13px 10px 13px;}a {    color: #0069d6;}a:hover {    color: #0050a3;    text-decoration: none;}a img {    border: none;}p {    margin-bottom: 9px;}h1,h2,h3,h4,h5,h6 {    color: #404040;    line-height: 36px;}h1 {    margin-bottom: 18px;    font-size: 30px;}h2 {    font-size: 24px;}h3 {    font-size: 18px;}h4 {    font-size: 16px;}h5 {    font-size: 14px;}h6 {    font-size: 13px;}hr {    margin: 0 0 19px;    border: 0;    border-bottom: 1px solid #ccc;}blockquote {    padding: 13px 13px 21px 15px;    margin-bottom: 18px;    font-family:georgia,serif;    font-style: italic;}blockquote:before {    content:"C";    font-size:40px;    margin-left:-10px;    font-family:georgia,serif;    color:#eee;}blockquote p {    font-size: 14px;    font-weight: 300;    line-height: 18px;    margin-bottom: 0;    font-style: italic;}code, pre {    font-family: Monaco, Andale Mono, Courier New, monospace;}code {    background-color: #fee9cc;    color: rgba(0, 0, 0, 0.75);    padding: 1px 3px;    font-size: 12px;    -webkit-border-radius: 3px;    -moz-border-radius: 3px;    border-radius: 3px;}pre {    display: block;    padding: 14px;    margin: 0 0 18px;    line-height: 16px;    font-size: 11px;    border: 1px solid #d9d9d9;    white-space: pre-wrap;    word-wrap: break-word;}pre code {    background-color: #fff;    color:#737373;    font-size: 11px;    padding: 0;}@media screen and (min-width: 768px) {    body {        width: 748px;        margin:10px auto;    }}</style><style id="custom" type="text/css"></style></head>
+<body marginheight="0" mpa-version="7.16.7" mpa-extension-id="ibefaeehajgcpooopoegkifhgecigeeg"><h2>MayaToRizomUV是什么?</h2>
+<p>这是一个能实时在RizomUV与Maya间分UV的工具。
+
+</p>
+<h2>Features - 特性</h2>
+<ul>
+<li>方便的<code>交互式分UV</code>功能</li>
+<li>工具省去相互导入导出的操作，<code>快捷高效</code></li>
+<li>编辑和预览<code>同步</code>，所见即所得</li>
+<li>模型只需保存即可自动化传递UV，<code>制作效率高错误几率小</code></li>
+<li>强大的<code>自动化分UV</code>功能，快速实现效果</li>
+<li>实时操作修改模型UV，<code>交互效率高</code></li>
+<li>完美兼容<code>Maya2014-Maya2022+</code>多版本</li>
+<li>具有多项传递、选择边线等功能，<code>功能丰富强大</code></li>
+<li>快捷的<code>一键式</code>安装的插件</li>
+</ul>
+<h2>Installation - 安装</h2>
+<h4>自动安装</h4>
+<ol>
+<li>点击MayaToRizomUV文件夹中的install_modules.cmd进行安装</li>
+<li>出现Install Successful表示安装成功</li>
+<li>重开Maya后找到在Windows-Setting/Perferences中的Plug-in Manager，搜索MayaToRizomuv.py插件点击Loaded进行使用</li>
+</ol>
+<h4>手动安装</h4>
+<ol>
+<li>点击MayaToRizomUV文件夹中的install_modules.cmd进行安装</li>
+<li>在MayaToRizomUV文件夹中找到modules文件夹，复制到我的文档中Maya文件夹下</li>
+<li>重开Maya后找到在Windows-Setting/Perferences中的Plug-in Manager，搜索MayaToRizomuv.py插件点击Loaded进行使用</li>
+</ol>
+<h2>Usage - 用法</h2>
+<h6>具体在B站搜索mayatorizomuv</h6>
+<h3>第一次使用</h3>
+<ol>
+<li>点击Edit-Preferences</li>
+<li>点击...打开RizomUV.exe启动文件选择</li>
+<li>设置完毕后点击Ok</li>
+<li><ul>
+<li>可以直接点击Send Link</li>
+<li>如果想快速的话可以直接点Push或者自动化功能，会弹出是否启动程序，选是即可</li>
+</ul>
+</li>
+<li>点击后启动程序即可分UV</li>
+<li>在需要传回maya时点击Pull即可</li>
+</ol>
+<h3>UVTool</h3>
+<ol>
+<li>使用AutoCut可以自动切割模型UVShell，如果在Selection Mode的模式下则是在选择的Shell中切割</li>
+</ol>
+<h3>MayaTool</h3>
+<h5>Select Similar</h5>
+<ul>
+<li>选择相同的物体</li>
+</ul>
+<h5>Transfer SectionUV</h5>
+<ul>
+<li>对选择的物体进行UV传递，仅作用于相同拓扑###Select Similar</li>
+</ul>
+<h5>LiveLink</h5>
+<ul>
+<li>开启即可使用实时分UV</li>
+</ul>
+<h5>Scrpit</h5>
+<ul>
+<li>可以使用自定义脚本进行自动化处理
+如fullAuto("pSphere*")
+参照maya的cmd的语法使用</li>
+</ul>
+<h2>Changelog - 更新日志</h2>
+<h5>V2021.4.10.02 最新</h5>
+<ul>
+<li>更新支持Maya2022,并且向下兼容至Maya2014</li>
+<li>修改Web链接为GitHub及网盘</li>
+<li>修复存在命名相同物体无法传递的BUG</li>
+<li>修复使用中文无法通过功能按钮启动链接的BUG</li>
+<li>优化安装方式，标准安装目录下第一次使用无需创建modules文件夹，实现一键式安装</li>
+<li>优化实时链接LiveLink功能，提高稳定性</li>
+<li>优化改进标准功能的传递功能</li>
+<li>优化Node传递逻辑,交互速度提升30%</li>
+<li>汉化Log提示内容</li>
+</ul>
+<h6>v2020.111201</h6>
+<ul>
+<li>添加内部下载地址，查看一般设置即可</li>
+<li>修复中英文切换错误的问题</li>
+</ul>
+<h6>v2020.110503</h6>
+<ul>
+<li>改进汉化，修复部分因中文无法运行的问题，以及添加安装成功提示</li>
+<li>改进使用C重构插件，速度大幅度提升</li>
+<li>添加增强功能按钮，默认开启，开启情况下无需在rizomuv手动保存，关闭则需要在rizomuv中进行手动保存，也会使其他高级功能无法使用，适用于增强功能在某些情况无法导出的情况</li>
+<li>添加刷新按钮，如果发现无法拉取rizomuv中做好的uv可以在Preferences菜单中点击刷新。清除缓存按钮则是将做好的文件清除缓存数据</li>
+</ul>
+<h6>v2020.082702</h6>
+<ul>
+<li>更新未启动link的情况下使用命令的提示框，点击Yes即可自动打开link和后续功能</li>
+<li>增加路径不正确的弹窗提示</li>
+<li>增加其余8个自动化UV命令的自定义脚本，自动化脚本格式为###("cmd")，如fullAuto("pSphere*")表示对场景中所有带有pSphere的多边形进行自动化分UV</li>
+<li>修复部分自动化脚本传输失败的问题</li>
+</ul>
+<h6>v2020.082201</h6>
+<ul>
+<li>更新界面，添加菜单栏功能，将程序选择放入首选项中</li>
+<li>更新中文翻译</li>
+<li>更新插件打开方式为菜单栏</li>
+<li>添加Help和about的界面</li>
+<li>添加调试使用license</li>
+<li>添加自动化工具的选择和全局模式</li>
+<li>修复AutoLink部分传递失效</li>
+</ul>
+<h2>Issue - 已知问题</h2>
+<ul>
+<li>Maya2022使用LiveLink有几率崩溃</li>
+<li>Maya2014单击传递无效，需要二次点击传递</li>
+<li>不支持Zbrush Goz到Maya的物体进行修改UV</li>
+<li>RizomUV2018版自动化功能部分不兼容</li>
+<li>部分非标准节点模型传递会变形</li>
+</ul>
+<h2>Contact - 联系</h2>
+<p>在使用中有任何问题，欢迎反馈给我，可以用以下联系方式跟我交流
+
+</p>
+<ul>
+<li>邮件(32229170@qq.com)</li>
+<li>微信公众号(3DTech)</li>
+<li>QQ技术交流群: 76031183</li>
+</ul>
+<h2>Dos - 文档</h2>
+<ul>
+<li>最新更新:<a href="https://www.jianshu.com/p/d82f2b21b05a">https://www.jianshu.com/p/d82f2b21b05a</a></li>
+<li>用户帮助:<a href="https://www.jianshu.com/p/000663862bec">https://www.jianshu.com/p/000663862bec</a></li>
+<li>工具演示:<a href="https://www.jianshu.com/p/bcbdc83c1a65">https://www.jianshu.com/p/bcbdc83c1a65</a></li>
+</ul>
+<h2>Donor developer - 捐助开发者</h2>
+<p>在兴趣的驱动下,写一个<code>免费</code>的东西，有欣喜，也还有汗水，希望你喜欢我的作品，同时也能支持一下。
+
+</p>
+<h2>Authors and acknowledgment - 贡献者和感谢</h2>
+<p>感谢以下,排名不分先后
+
+</p>
+<ul>
+<li>余则成</li>
+<li>刘超</li>
+<li>chenclean</li>
+<li>The dead is comin</li>
+<li>香蕉橘子西瓜汁</li>
+<li>北海公瑾</li>
+<li>金王斌</li>
+</ul>
+<h2>License - 版权信息</h2>
+<p>该项目签署了GNU General Public License v3.0 授权许可，详情请参阅 LICENSE.md
+</p>
+<h3>关于作者</h3>
+<p>Steven7
+
+</p>
+</body></html>
