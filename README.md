@@ -1,3 +1,5 @@
+[![GitHub issues](https://img.shields.io/github/issues/3DTech-Steven7/MayaToRizomuv.svg)](https://github.com/3DTech-Steven7/MayaToRizomuv/issues) [![GitHub license](https://img.shields.io/github/license/3DTech-Steven7/MayaToRizomuv.svg)](https://github.com/3DTech-Steven7/MayaToRizomuv/blob/master/LICENSE) [![GitHub forks](https://img.shields.io/github/forks/3DTech-Steven7/MayaToRizomuv.svg)](https://github.com/3DTech-Steven7/MayaToRizomuv) [![GitHub stars](https://img.shields.io/github/stars/3DTech-Steven7.svg)](https://github.com/3DTech-Steven7/MayaToRizomuv/stargazers)
+
 ## MayaToRizomUV是什么?
 这是一个能实时在RizomUV与Maya间分UV的工具。
 
