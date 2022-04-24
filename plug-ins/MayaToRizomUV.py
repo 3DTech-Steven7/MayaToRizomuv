@@ -1,18 +1,26 @@
 import maya.OpenMayaMPx as ompx
 import sys
 
+
 PyVersion = sys.version_info[0]
 if(PyVersion == 3):
+    PySubVersion = sys.version_info[1]
     from importlib import reload
-    try:
-        from ..mtor3 import mainwindow as mtor
-    except:
-        from mtor3 import mainwindow as mtor
+    if PySubVersion == 7:
+        try:
+            from ..mtor37 import mainwindow as mtor
+        except:
+            from mtor37 import mainwindow as mtor
+    elif PySubVersion == 9:
+        try:
+            from ..mtor39 import mainwindow as mtor
+        except:
+            from mtor39 import mainwindow as mtor
 else:
     try:
-        from ..mtor2 import mainwindow as mtor
+        from ..mtor27 import mainwindow as mtor
     except:
-        from mtor2 import mainwindow as mtor
+        from mtor27 import mainwindow as mtor
 
 reload(mtor)
 
@@ -27,7 +35,7 @@ def initializePlugin(mobject):
     :param plugin: MObject used to register the plugin using an MFnPlugin function set
     """
     vendor = "Steven Qiu"
-    version = "2021.4.10.02"
+    version = "2022.042316"
     mplugin = ompx.MFnPlugin(mobject, vendor, version)
     mtor.initialize()
 

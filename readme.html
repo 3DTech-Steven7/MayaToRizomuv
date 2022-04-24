@@ -1,161 +1,656 @@
-<html lang="en"><head>
-    <meta charset="UTF-8">
-    <title></title>
-<style class="mpa-style-fix ImageGatherer">.FotorFrame{position:fixed!important}</style><style id="system" type="text/css">h1,h2,h3,h4,h5,h6,p,blockquote {    margin: 0;    padding: 0;}body {    font-family: "Helvetica Neue", Helvetica, "Hiragino Sans GB", Arial, sans-serif;    font-size: 13px;    line-height: 18px;    color: #737373;    margin: 10px 13px 10px 13px;}a {    color: #0069d6;}a:hover {    color: #0050a3;    text-decoration: none;}a img {    border: none;}p {    margin-bottom: 9px;}h1,h2,h3,h4,h5,h6 {    color: #404040;    line-height: 36px;}h1 {    margin-bottom: 18px;    font-size: 30px;}h2 {    font-size: 24px;}h3 {    font-size: 18px;}h4 {    font-size: 16px;}h5 {    font-size: 14px;}h6 {    font-size: 13px;}hr {    margin: 0 0 19px;    border: 0;    border-bottom: 1px solid #ccc;}blockquote {    padding: 13px 13px 21px 15px;    margin-bottom: 18px;    font-family:georgia,serif;    font-style: italic;}blockquote:before {    content:"C";    font-size:40px;    margin-left:-10px;    font-family:georgia,serif;    color:#eee;}blockquote p {    font-size: 14px;    font-weight: 300;    line-height: 18px;    margin-bottom: 0;    font-style: italic;}code, pre {    font-family: Monaco, Andale Mono, Courier New, monospace;}code {    background-color: #fee9cc;    color: rgba(0, 0, 0, 0.75);    padding: 1px 3px;    font-size: 12px;    -webkit-border-radius: 3px;    -moz-border-radius: 3px;    border-radius: 3px;}pre {    display: block;    padding: 14px;    margin: 0 0 18px;    line-height: 16px;    font-size: 11px;    border: 1px solid #d9d9d9;    white-space: pre-wrap;    word-wrap: break-word;}pre code {    background-color: #fff;    color:#737373;    font-size: 11px;    padding: 0;}@media screen and (min-width: 768px) {    body {        width: 748px;        margin:10px auto;    }}</style><style id="custom" type="text/css"></style></head>
-<body marginheight="0" mpa-version="7.16.7" mpa-extension-id="ibefaeehajgcpooopoegkifhgecigeeg"><h2>MayaToRizomUV是什么?</h2>
-<p>这是一个能实时在RizomUV与Maya间分UV的工具。
+<!DOCTYPE html><html><head>
+      <title>README</title>
+      <meta charset="utf-8">
+      <meta name="viewport" content="width=device-width, initial-scale=1.0">
+      
+      <link rel="stylesheet" href="file:///c:\Users\Administrator\.vscode\extensions\shd101wyy.markdown-preview-enhanced-0.6.2\node_modules\@shd101wyy\mume\dependencies\katex\katex.min.css">
+      
+      
+      
+      
+      
+      
+      
+      
+      
+      <style>
+      /**
+ * prism.js Github theme based on GitHub's theme.
+ * @author Sam Clarke
+ */
+code[class*="language-"],
+pre[class*="language-"] {
+  color: #333;
+  background: none;
+  font-family: Consolas, "Liberation Mono", Menlo, Courier, monospace;
+  text-align: left;
+  white-space: pre;
+  word-spacing: normal;
+  word-break: normal;
+  word-wrap: normal;
+  line-height: 1.4;
 
-</p>
-<h2>Features - 特性</h2>
+  -moz-tab-size: 8;
+  -o-tab-size: 8;
+  tab-size: 8;
+
+  -webkit-hyphens: none;
+  -moz-hyphens: none;
+  -ms-hyphens: none;
+  hyphens: none;
+}
+
+/* Code blocks */
+pre[class*="language-"] {
+  padding: .8em;
+  overflow: auto;
+  /* border: 1px solid #ddd; */
+  border-radius: 3px;
+  /* background: #fff; */
+  background: #f5f5f5;
+}
+
+/* Inline code */
+:not(pre) > code[class*="language-"] {
+  padding: .1em;
+  border-radius: .3em;
+  white-space: normal;
+  background: #f5f5f5;
+}
+
+.token.comment,
+.token.blockquote {
+  color: #969896;
+}
+
+.token.cdata {
+  color: #183691;
+}
+
+.token.doctype,
+.token.punctuation,
+.token.variable,
+.token.macro.property {
+  color: #333;
+}
+
+.token.operator,
+.token.important,
+.token.keyword,
+.token.rule,
+.token.builtin {
+  color: #a71d5d;
+}
+
+.token.string,
+.token.url,
+.token.regex,
+.token.attr-value {
+  color: #183691;
+}
+
+.token.property,
+.token.number,
+.token.boolean,
+.token.entity,
+.token.atrule,
+.token.constant,
+.token.symbol,
+.token.command,
+.token.code {
+  color: #0086b3;
+}
+
+.token.tag,
+.token.selector,
+.token.prolog {
+  color: #63a35c;
+}
+
+.token.function,
+.token.namespace,
+.token.pseudo-element,
+.token.class,
+.token.class-name,
+.token.pseudo-class,
+.token.id,
+.token.url-reference .token.variable,
+.token.attr-name {
+  color: #795da3;
+}
+
+.token.entity {
+  cursor: help;
+}
+
+.token.title,
+.token.title .token.punctuation {
+  font-weight: bold;
+  color: #1d3e81;
+}
+
+.token.list {
+  color: #ed6a43;
+}
+
+.token.inserted {
+  background-color: #eaffea;
+  color: #55a532;
+}
+
+.token.deleted {
+  background-color: #ffecec;
+  color: #bd2c00;
+}
+
+.token.bold {
+  font-weight: bold;
+}
+
+.token.italic {
+  font-style: italic;
+}
+
+
+/* JSON */
+.language-json .token.property {
+  color: #183691;
+}
+
+.language-markup .token.tag .token.punctuation {
+  color: #333;
+}
+
+/* CSS */
+code.language-css,
+.language-css .token.function {
+  color: #0086b3;
+}
+
+/* YAML */
+.language-yaml .token.atrule {
+  color: #63a35c;
+}
+
+code.language-yaml {
+  color: #183691;
+}
+
+/* Ruby */
+.language-ruby .token.function {
+  color: #333;
+}
+
+/* Markdown */
+.language-markdown .token.url {
+  color: #795da3;
+}
+
+/* Makefile */
+.language-makefile .token.symbol {
+  color: #795da3;
+}
+
+.language-makefile .token.variable {
+  color: #183691;
+}
+
+.language-makefile .token.builtin {
+  color: #0086b3;
+}
+
+/* Bash */
+.language-bash .token.keyword {
+  color: #0086b3;
+}
+
+/* highlight */
+pre[data-line] {
+  position: relative;
+  padding: 1em 0 1em 3em;
+}
+pre[data-line] .line-highlight-wrapper {
+  position: absolute;
+  top: 0;
+  left: 0;
+  background-color: transparent;
+  display: block;
+  width: 100%;
+}
+
+pre[data-line] .line-highlight {
+  position: absolute;
+  left: 0;
+  right: 0;
+  padding: inherit 0;
+  margin-top: 1em;
+  background: hsla(24, 20%, 50%,.08);
+  background: linear-gradient(to right, hsla(24, 20%, 50%,.1) 70%, hsla(24, 20%, 50%,0));
+  pointer-events: none;
+  line-height: inherit;
+  white-space: pre;
+}
+
+pre[data-line] .line-highlight:before, 
+pre[data-line] .line-highlight[data-end]:after {
+  content: attr(data-start);
+  position: absolute;
+  top: .4em;
+  left: .6em;
+  min-width: 1em;
+  padding: 0 .5em;
+  background-color: hsla(24, 20%, 50%,.4);
+  color: hsl(24, 20%, 95%);
+  font: bold 65%/1.5 sans-serif;
+  text-align: center;
+  vertical-align: .3em;
+  border-radius: 999px;
+  text-shadow: none;
+  box-shadow: 0 1px white;
+}
+
+pre[data-line] .line-highlight[data-end]:after {
+  content: attr(data-end);
+  top: auto;
+  bottom: .4em;
+}html body{font-family:"Helvetica Neue",Helvetica,"Segoe UI",Arial,freesans,sans-serif;font-size:16px;line-height:1.6;color:#333;background-color:#fff;overflow:initial;box-sizing:border-box;word-wrap:break-word}html body>:first-child{margin-top:0}html body h1,html body h2,html body h3,html body h4,html body h5,html body h6{line-height:1.2;margin-top:1em;margin-bottom:16px;color:#000}html body h1{font-size:2.25em;font-weight:300;padding-bottom:.3em}html body h2{font-size:1.75em;font-weight:400;padding-bottom:.3em}html body h3{font-size:1.5em;font-weight:500}html body h4{font-size:1.25em;font-weight:600}html body h5{font-size:1.1em;font-weight:600}html body h6{font-size:1em;font-weight:600}html body h1,html body h2,html body h3,html body h4,html body h5{font-weight:600}html body h5{font-size:1em}html body h6{color:#5c5c5c}html body strong{color:#000}html body del{color:#5c5c5c}html body a:not([href]){color:inherit;text-decoration:none}html body a{color:#08c;text-decoration:none}html body a:hover{color:#00a3f5;text-decoration:none}html body img{max-width:100%}html body>p{margin-top:0;margin-bottom:16px;word-wrap:break-word}html body>ul,html body>ol{margin-bottom:16px}html body ul,html body ol{padding-left:2em}html body ul.no-list,html body ol.no-list{padding:0;list-style-type:none}html body ul ul,html body ul ol,html body ol ol,html body ol ul{margin-top:0;margin-bottom:0}html body li{margin-bottom:0}html body li.task-list-item{list-style:none}html body li>p{margin-top:0;margin-bottom:0}html body .task-list-item-checkbox{margin:0 .2em .25em -1.8em;vertical-align:middle}html body .task-list-item-checkbox:hover{cursor:pointer}html body blockquote{margin:16px 0;font-size:inherit;padding:0 15px;color:#5c5c5c;background-color:#f0f0f0;border-left:4px solid #d6d6d6}html body blockquote>:first-child{margin-top:0}html body blockquote>:last-child{margin-bottom:0}html body hr{height:4px;margin:32px 0;background-color:#d6d6d6;border:0 none}html body table{margin:10px 0 15px 0;border-collapse:collapse;border-spacing:0;display:block;width:100%;overflow:auto;word-break:normal;word-break:keep-all}html body table th{font-weight:bold;color:#000}html body table td,html body table th{border:1px solid #d6d6d6;padding:6px 13px}html body dl{padding:0}html body dl dt{padding:0;margin-top:16px;font-size:1em;font-style:italic;font-weight:bold}html body dl dd{padding:0 16px;margin-bottom:16px}html body code{font-family:Menlo,Monaco,Consolas,'Courier New',monospace;font-size:.85em !important;color:#000;background-color:#f0f0f0;border-radius:3px;padding:.2em 0}html body code::before,html body code::after{letter-spacing:-0.2em;content:"\00a0"}html body pre>code{padding:0;margin:0;font-size:.85em !important;word-break:normal;white-space:pre;background:transparent;border:0}html body .highlight{margin-bottom:16px}html body .highlight pre,html body pre{padding:1em;overflow:auto;font-size:.85em !important;line-height:1.45;border:#d6d6d6;border-radius:3px}html body .highlight pre{margin-bottom:0;word-break:normal}html body pre code,html body pre tt{display:inline;max-width:initial;padding:0;margin:0;overflow:initial;line-height:inherit;word-wrap:normal;background-color:transparent;border:0}html body pre code:before,html body pre tt:before,html body pre code:after,html body pre tt:after{content:normal}html body p,html body blockquote,html body ul,html body ol,html body dl,html body pre{margin-top:0;margin-bottom:16px}html body kbd{color:#000;border:1px solid #d6d6d6;border-bottom:2px solid #c7c7c7;padding:2px 4px;background-color:#f0f0f0;border-radius:3px}@media print{html body{background-color:#fff}html body h1,html body h2,html body h3,html body h4,html body h5,html body h6{color:#000;page-break-after:avoid}html body blockquote{color:#5c5c5c}html body pre{page-break-inside:avoid}html body table{display:table}html body img{display:block;max-width:100%;max-height:100%}html body pre,html body code{word-wrap:break-word;white-space:pre}}.markdown-preview{width:100%;height:100%;box-sizing:border-box}.markdown-preview .pagebreak,.markdown-preview .newpage{page-break-before:always}.markdown-preview pre.line-numbers{position:relative;padding-left:3.8em;counter-reset:linenumber}.markdown-preview pre.line-numbers>code{position:relative}.markdown-preview pre.line-numbers .line-numbers-rows{position:absolute;pointer-events:none;top:1em;font-size:100%;left:0;width:3em;letter-spacing:-1px;border-right:1px solid #999;-webkit-user-select:none;-moz-user-select:none;-ms-user-select:none;user-select:none}.markdown-preview pre.line-numbers .line-numbers-rows>span{pointer-events:none;display:block;counter-increment:linenumber}.markdown-preview pre.line-numbers .line-numbers-rows>span:before{content:counter(linenumber);color:#999;display:block;padding-right:.8em;text-align:right}.markdown-preview .mathjax-exps .MathJax_Display{text-align:center !important}.markdown-preview:not([for="preview"]) .code-chunk .btn-group{display:none}.markdown-preview:not([for="preview"]) .code-chunk .status{display:none}.markdown-preview:not([for="preview"]) .code-chunk .output-div{margin-bottom:16px}.scrollbar-style::-webkit-scrollbar{width:8px}.scrollbar-style::-webkit-scrollbar-track{border-radius:10px;background-color:transparent}.scrollbar-style::-webkit-scrollbar-thumb{border-radius:5px;background-color:rgba(150,150,150,0.66);border:4px solid rgba(150,150,150,0.66);background-clip:content-box}html body[for="html-export"]:not([data-presentation-mode]){position:relative;width:100%;height:100%;top:0;left:0;margin:0;padding:0;overflow:auto}html body[for="html-export"]:not([data-presentation-mode]) .markdown-preview{position:relative;top:0}@media screen and (min-width:914px){html body[for="html-export"]:not([data-presentation-mode]) .markdown-preview{padding:2em calc(50% - 457px + 2em)}}@media screen and (max-width:914px){html body[for="html-export"]:not([data-presentation-mode]) .markdown-preview{padding:2em}}@media screen and (max-width:450px){html body[for="html-export"]:not([data-presentation-mode]) .markdown-preview{font-size:14px !important;padding:1em}}@media print{html body[for="html-export"]:not([data-presentation-mode]) #sidebar-toc-btn{display:none}}html body[for="html-export"]:not([data-presentation-mode]) #sidebar-toc-btn{position:fixed;bottom:8px;left:8px;font-size:28px;cursor:pointer;color:inherit;z-index:99;width:32px;text-align:center;opacity:.4}html body[for="html-export"]:not([data-presentation-mode])[html-show-sidebar-toc] #sidebar-toc-btn{opacity:1}html body[for="html-export"]:not([data-presentation-mode])[html-show-sidebar-toc] .md-sidebar-toc{position:fixed;top:0;left:0;width:300px;height:100%;padding:32px 0 48px 0;font-size:14px;box-shadow:0 0 4px rgba(150,150,150,0.33);box-sizing:border-box;overflow:auto;background-color:inherit}html body[for="html-export"]:not([data-presentation-mode])[html-show-sidebar-toc] .md-sidebar-toc::-webkit-scrollbar{width:8px}html body[for="html-export"]:not([data-presentation-mode])[html-show-sidebar-toc] .md-sidebar-toc::-webkit-scrollbar-track{border-radius:10px;background-color:transparent}html body[for="html-export"]:not([data-presentation-mode])[html-show-sidebar-toc] .md-sidebar-toc::-webkit-scrollbar-thumb{border-radius:5px;background-color:rgba(150,150,150,0.66);border:4px solid rgba(150,150,150,0.66);background-clip:content-box}html body[for="html-export"]:not([data-presentation-mode])[html-show-sidebar-toc] .md-sidebar-toc a{text-decoration:none}html body[for="html-export"]:not([data-presentation-mode])[html-show-sidebar-toc] .md-sidebar-toc ul{padding:0 1.6em;margin-top:.8em}html body[for="html-export"]:not([data-presentation-mode])[html-show-sidebar-toc] .md-sidebar-toc li{margin-bottom:.8em}html body[for="html-export"]:not([data-presentation-mode])[html-show-sidebar-toc] .md-sidebar-toc ul{list-style-type:none}html body[for="html-export"]:not([data-presentation-mode])[html-show-sidebar-toc] .markdown-preview{left:300px;width:calc(100% -  300px);padding:2em calc(50% - 457px -  150px);margin:0;box-sizing:border-box}@media screen and (max-width:1274px){html body[for="html-export"]:not([data-presentation-mode])[html-show-sidebar-toc] .markdown-preview{padding:2em}}@media screen and (max-width:450px){html body[for="html-export"]:not([data-presentation-mode])[html-show-sidebar-toc] .markdown-preview{width:100%}}html body[for="html-export"]:not([data-presentation-mode]):not([html-show-sidebar-toc]) .markdown-preview{left:50%;transform:translateX(-50%)}html body[for="html-export"]:not([data-presentation-mode]):not([html-show-sidebar-toc]) .md-sidebar-toc{display:none}
+/* Please visit the URL below for more information: */
+/*   https://shd101wyy.github.io/markdown-preview-enhanced/#/customize-css */
+
+      </style>
+    </head>
+    <body for="html-export">
+      <div class="mume markdown-preview  ">
+      <p><a href="https://github.com/3DTech-Steven7/MayaToRizomuv/issues"><img src="https://img.shields.io/github/issues/3DTech-Steven7/MayaToRizomuv.svg" alt="GitHub issues"></a> <a href="https://github.com/3DTech-Steven7/MayaToRizomuv/blob/master/LICENSE"><img src="https://img.shields.io/github/license/3DTech-Steven7/MayaToRizomuv.svg" alt="GitHub license"></a> <a href="https://github.com/3DTech-Steven7/MayaToRizomuv"><img src="https://img.shields.io/github/forks/3DTech-Steven7/MayaToRizomuv.svg" alt="GitHub forks"></a> <a href="https://github.com/3DTech-Steven7/MayaToRizomuv/stargazers"><img src="https://img.shields.io/github/stars/3DTech-Steven7.svg" alt="GitHub stars"></a></p>
+<h1 class="mume-header" id="what-is-mayatorizomuv-mayatorizomuv%E6%98%AF%E4%BB%80%E4%B9%88">What is MayaToRizomUV? -  MayaToRizomUV&#x662F;&#x4EC0;&#x4E48;?</h1>
+
+<p>&#x8FD9;&#x662F;&#x4E00;&#x4E2A;&#x80FD;&#x5B9E;&#x65F6;&#x5728;RizomUV&#x4E0E;Maya&#x95F4;&#x5206;UV&#x7684;&#x5DE5;&#x5177;&#x3002;</p>
+<hr>
+<p>This is a tool that can split UVs between RizomUVs and Maya in real time.</p>
+<img src="images/demo.gif" width="700">
+<br>
+<h2 class="mume-header" id="features-%E7%89%B9%E6%80%A7">Features - &#x7279;&#x6027;</h2>
+
 <ul>
-<li>方便的<code>交互式分UV</code>功能</li>
-<li>工具省去相互导入导出的操作，<code>快捷高效</code></li>
-<li>编辑和预览<code>同步</code>，所见即所得</li>
-<li>模型只需保存即可自动化传递UV，<code>制作效率高错误几率小</code></li>
-<li>强大的<code>自动化分UV</code>功能，快速实现效果</li>
-<li>实时操作修改模型UV，<code>交互效率高</code></li>
-<li>完美兼容<code>Maya2014-Maya2022+</code>多版本</li>
-<li>具有多项传递、选择边线等功能，<code>功能丰富强大</code></li>
-<li>快捷的<code>一键式</code>安装的插件</li>
+<li>&#x65B9;&#x4FBF;&#x7684;<code>&#x4EA4;&#x4E92;&#x5F0F;&#x5206;UV</code>&#x529F;&#x80FD;</li>
+<li>&#x5DE5;&#x5177;&#x7701;&#x53BB;&#x76F8;&#x4E92;&#x5BFC;&#x5165;&#x5BFC;&#x51FA;&#x7684;&#x64CD;&#x4F5C;&#xFF0C;<code>&#x5FEB;&#x6377;&#x9AD8;&#x6548;</code></li>
+<li>&#x7F16;&#x8F91;&#x548C;&#x9884;&#x89C8;<code>&#x540C;&#x6B65;</code>&#xFF0C;&#x6240;&#x89C1;&#x5373;&#x6240;&#x5F97;</li>
+<li>&#x6A21;&#x578B;&#x53EA;&#x9700;&#x4FDD;&#x5B58;&#x5373;&#x53EF;&#x81EA;&#x52A8;&#x5316;&#x4F20;&#x9012;UV&#xFF0C;<code>&#x5236;&#x4F5C;&#x6548;&#x7387;&#x9AD8;&#x9519;&#x8BEF;&#x51E0;&#x7387;&#x5C0F;</code></li>
+<li>&#x5F3A;&#x5927;&#x7684;<code>&#x81EA;&#x52A8;&#x5316;&#x5206;UV</code>&#x529F;&#x80FD;&#xFF0C;&#x5FEB;&#x901F;&#x5B9E;&#x73B0;&#x6548;&#x679C;</li>
+<li>&#x5B9E;&#x65F6;&#x64CD;&#x4F5C;&#x4FEE;&#x6539;&#x6A21;&#x578B;UV&#xFF0C;<code>&#x4EA4;&#x4E92;&#x6548;&#x7387;&#x9AD8;</code></li>
+<li>&#x5B8C;&#x7F8E;&#x517C;&#x5BB9;<code>Maya2017-Maya2023</code>&#x591A;&#x7248;&#x672C;</li>
+<li>&#x5177;&#x6709;&#x591A;&#x9879;&#x4F20;&#x9012;&#x3001;&#x9009;&#x62E9;&#x8FB9;&#x7EBF;&#x7B49;&#x529F;&#x80FD;&#xFF0C;<code>&#x529F;&#x80FD;&#x4E30;&#x5BCC;&#x5F3A;&#x5927;</code></li>
+<li>&#x5FEB;&#x6377;&#x7684;<code>&#x4E00;&#x952E;&#x5F0F;</code>&#x5B89;&#x88C5;&#x7684;&#x63D2;&#x4EF6;</li>
 </ul>
-<h2>Installation - 安装</h2>
-<h4>自动安装</h4>
+<hr>
+<ul>
+<li>Convenient <code>interactive UV split</code> function</li>
+<li>The tool saves the operation of importing and exporting each other, <code>fast and efficient</code></li>
+<li>Edit and preview <code>sync</code>, WYSIWYG</li>
+<li>The model can automatically transfer UVs just by saving, <code>high production efficiency and small error probability</code></li>
+<li>Powerful <code>Automated UV</code> function to quickly achieve the effect</li>
+<li>Real-time operation to modify model UV, <code>high interaction efficiency</code></li>
+<li>Perfectly compatible with <code>Maya2017-Maya2023</code> versions</li>
+<li>With multiple functions such as transfer and edge selection, <code>rich and powerful</code></li>
+<li>Quick <code>one-click</code> installation of plugins</li>
+</ul>
+<br>
+<h2 class="mume-header" id="installation-%E5%AE%89%E8%A3%85">Installation - &#x5B89;&#x88C5;</h2>
+
+<h3 class="mume-header" id="automatic-installation-%E8%87%AA%E5%8A%A8%E5%AE%89%E8%A3%85">Automatic installation - &#x81EA;&#x52A8;&#x5B89;&#x88C5;</h3>
+
 <ol>
-<li>点击MayaToRizomUV文件夹中的install_modules.cmd进行安装</li>
-<li>出现Install Successful表示安装成功</li>
-<li>重开Maya后找到在Windows-Setting/Perferences中的Plug-in Manager，搜索MayaToRizomuv.py插件点击Loaded进行使用</li>
+<li>&#x70B9;&#x51FB;MayaToRizomUV&#x6587;&#x4EF6;&#x5939;&#x4E2D;&#x7684;install_modules.cmd&#x8FDB;&#x884C;&#x5B89;&#x88C5;</li>
+<li>&#x51FA;&#x73B0;Install Successful&#x8868;&#x793A;&#x5B89;&#x88C5;&#x6210;&#x529F;</li>
+<li>&#x91CD;&#x5F00;Maya&#x540E;&#x627E;&#x5230;&#x5728;Windows-Setting/Perferences&#x4E2D;&#x7684;Plug-in Manager&#xFF0C;&#x641C;&#x7D22;MayaToRizomuv.py&#x63D2;&#x4EF6;&#x70B9;&#x51FB;Loaded&#x8FDB;&#x884C;&#x4F7F;&#x7528;</li>
 </ol>
-<h4>手动安装</h4>
+<hr>
 <ol>
-<li>点击MayaToRizomUV文件夹中的install_modules.cmd进行安装</li>
-<li>在MayaToRizomUV文件夹中找到modules文件夹，复制到我的文档中Maya文件夹下</li>
-<li>重开Maya后找到在Windows-Setting/Perferences中的Plug-in Manager，搜索MayaToRizomuv.py插件点击Loaded进行使用</li>
+<li>Click install_modules.cmd in the MayaToRizomUV folder to install</li>
+<li>If Install Successful appears, the installation is successful.</li>
+<li>After reopening Maya, find the Plug-in Manager in Windows-Settings/Perferences, search for the <a href="http://MayaToRizomuv.py">MayaToRizomuv.py</a> plugin and click Loaded to use it</li>
 </ol>
-<h2>Usage - 用法</h2>
-<h6>具体在B站搜索mayatorizomuv</h6>
-<h3>第一次使用</h3>
+<h3 class="mume-header" id="manual-installation-%E6%89%8B%E5%8A%A8%E5%AE%89%E8%A3%85">Manual installation - &#x624B;&#x52A8;&#x5B89;&#x88C5;</h3>
+
 <ol>
-<li>点击Edit-Preferences</li>
-<li>点击...打开RizomUV.exe启动文件选择</li>
-<li>设置完毕后点击Ok</li>
-<li><ul>
-<li>可以直接点击Send Link</li>
-<li>如果想快速的话可以直接点Push或者自动化功能，会弹出是否启动程序，选是即可</li>
+<li>&#x70B9;&#x51FB;MayaToRizomUV&#x6587;&#x4EF6;&#x5939;&#x4E2D;&#x7684;install_modules.cmd&#x8FDB;&#x884C;&#x5B89;&#x88C5;</li>
+<li>&#x5728;MayaToRizomUV&#x6587;&#x4EF6;&#x5939;&#x4E2D;&#x627E;&#x5230;modules&#x6587;&#x4EF6;&#x5939;&#xFF0C;&#x590D;&#x5236;&#x5230;&#x6211;&#x7684;&#x6587;&#x6863;&#x4E2D;Maya&#x6587;&#x4EF6;&#x5939;&#x4E0B;</li>
+<li>&#x91CD;&#x5F00;Maya&#x540E;&#x627E;&#x5230;&#x5728;Windows-Setting/Perferences&#x4E2D;&#x7684;Plug-in Manager&#xFF0C;&#x641C;&#x7D22;MayaToRizomuv.py&#x63D2;&#x4EF6;&#x70B9;&#x51FB;Loaded&#x8FDB;&#x884C;&#x4F7F;&#x7528;</li>
+</ol>
+<hr>
+<ol>
+<li>Click install_modules.cmd in the MayaToRizomUV folder to install</li>
+<li>Find the modules folder in the MayaToRizomUV folder and copy it to the Maya folder in My Documents</li>
+<li>After reopening Maya, find the Plug-in Manager in Windows-Settings/Perferences, search for the <a href="http://MayaToRizomuv.py">MayaToRizomuv.py</a> plugin and click Loaded to use it</li>
+</ol>
+<h3 class="mume-header" id="maya2022%E5%8F%8Amaya2023%E4%BD%BF%E7%94%A8%E6%97%B6%E9%9C%80%E8%A6%81%E5%AE%89%E8%A3%85pymel3">Maya2022&#x53CA;Maya2023&#x4F7F;&#x7528;&#x65F6;&#x9700;&#x8981;&#x5B89;&#x88C5;PyMel3</h3>
+
+<ul>
+<li>PyMel3 needs to be installed when using Maya2022 and Maya2023</li>
+</ul>
+<p>1<br>
+<br></p>
+<h2 class="mume-header" id="usage-%E7%94%A8%E6%B3%95">Usage - &#x7528;&#x6CD5;</h2>
+
+<h6 class="mume-header" id="specifically-search-for-mayatorizomuv-on-youtube-%E5%85%B7%E4%BD%93%E5%9C%A8b%E7%AB%99%E6%90%9C%E7%B4%A2mayatorizomuv">Specifically search for mayatorizomuv on YouTube - &#x5177;&#x4F53;&#x5728;B&#x7AD9;&#x641C;&#x7D22;mayatorizomuv</h6>
+
+<h3 class="mume-header" id="first-use-%E7%AC%AC%E4%B8%80%E6%AC%A1%E4%BD%BF%E7%94%A8">First use - &#x7B2C;&#x4E00;&#x6B21;&#x4F7F;&#x7528;</h3>
+
+<ul>
+<li>&#x8BBE;&#x7F6E;Rizomuv&#x8DEF;&#x5F84;</li>
+</ul>
+<ol>
+<li>&#x70B9;&#x51FB;Edit-Preferences</li>
+<li>&#x70B9;&#x51FB;...&#x6253;&#x5F00;RizomUV.exe&#x542F;&#x52A8;&#x6587;&#x4EF6;&#x9009;&#x62E9;</li>
+<li>&#x8BBE;&#x7F6E;&#x5B8C;&#x6BD5;&#x540E;&#x70B9;&#x51FB;Ok</li>
+</ol>
+<ul>
+<li>&#x65B0;&#x7248;&#x81EA;&#x52A8;&#x67E5;&#x627E;&#x8DEF;&#x5F84;&#xFF0C;&#x53EF;&#x4E0D;&#x8BBE;&#x7F6E;&#x8DEF;&#x5F84;</li>
+</ul>
+<ol>
+<li>
+<ul>
+<li>&#x53EF;&#x4EE5;&#x76F4;&#x63A5;&#x70B9;&#x51FB;Send Link</li>
+<li>&#x5982;&#x679C;&#x60F3;&#x5FEB;&#x901F;&#x7684;&#x8BDD;&#x53EF;&#x4EE5;&#x76F4;&#x63A5;&#x70B9;Push&#x6216;&#x8005;&#x81EA;&#x52A8;&#x5316;&#x529F;&#x80FD;&#xFF0C;&#x4F1A;&#x5F39;&#x51FA;&#x662F;&#x5426;&#x542F;&#x52A8;&#x7A0B;&#x5E8F;&#xFF0C;&#x9009;&#x662F;&#x5373;&#x53EF;</li>
 </ul>
 </li>
-<li>点击后启动程序即可分UV</li>
-<li>在需要传回maya时点击Pull即可</li>
+<li>&#x70B9;&#x51FB;&#x540E;&#x542F;&#x52A8;&#x7A0B;&#x5E8F;&#x5373;&#x53EF;&#x5206;UV</li>
+<li>&#x5728;&#x9700;&#x8981;&#x4F20;&#x56DE;maya&#x65F6;&#x70B9;&#x51FB;Pull&#x5373;&#x53EF;</li>
 </ol>
-<h3>UVTool</h3>
+<hr>
+<ul>
+<li>Set Rizomuv path</li>
+</ul>
 <ol>
-<li>使用AutoCut可以自动切割模型UVShell，如果在Selection Mode的模式下则是在选择的Shell中切割</li>
+<li>Click Edit-Preferences</li>
+<li>Click ... to open RizomUV.exe startup file selection</li>
+<li>Click Ok after setting</li>
 </ol>
-<h3>MayaTool</h3>
-<h5>Select Similar</h5>
 <ul>
-<li>选择相同的物体</li>
+<li>The new version automatically finds the path, you can not set the path</li>
 </ul>
-<h5>Transfer SectionUV</h5>
+<ol>
+<li>
 <ul>
-<li>对选择的物体进行UV传递，仅作用于相同拓扑###Select Similar</li>
+<li>You can click Send Link directly</li>
+<li>If you want to be quick, you can directly click the Push or automation function, and it will pop up whether to start the program, select yes</li>
 </ul>
-<h5>LiveLink</h5>
-<ul>
-<li>开启即可使用实时分UV</li>
-</ul>
-<h5>Scrpit</h5>
-<ul>
-<li>可以使用自定义脚本进行自动化处理
-如fullAuto("pSphere*")
-参照maya的cmd的语法使用</li>
-</ul>
-<h2>Changelog - 更新日志</h2>
-<h5>V2021.4.10.02 最新</h5>
-<ul>
-<li>更新支持Maya2022,并且向下兼容至Maya2014</li>
-<li>修改Web链接为GitHub及网盘</li>
-<li>修复存在命名相同物体无法传递的BUG</li>
-<li>修复使用中文无法通过功能按钮启动链接的BUG</li>
-<li>优化安装方式，标准安装目录下第一次使用无需创建modules文件夹，实现一键式安装</li>
-<li>优化实时链接LiveLink功能，提高稳定性</li>
-<li>优化改进标准功能的传递功能</li>
-<li>优化Node传递逻辑,交互速度提升30%</li>
-<li>汉化Log提示内容</li>
-</ul>
-<h6>v2020.111201</h6>
-<ul>
-<li>添加内部下载地址，查看一般设置即可</li>
-<li>修复中英文切换错误的问题</li>
-</ul>
-<h6>v2020.110503</h6>
-<ul>
-<li>改进汉化，修复部分因中文无法运行的问题，以及添加安装成功提示</li>
-<li>改进使用C重构插件，速度大幅度提升</li>
-<li>添加增强功能按钮，默认开启，开启情况下无需在rizomuv手动保存，关闭则需要在rizomuv中进行手动保存，也会使其他高级功能无法使用，适用于增强功能在某些情况无法导出的情况</li>
-<li>添加刷新按钮，如果发现无法拉取rizomuv中做好的uv可以在Preferences菜单中点击刷新。清除缓存按钮则是将做好的文件清除缓存数据</li>
-</ul>
-<h6>v2020.082702</h6>
-<ul>
-<li>更新未启动link的情况下使用命令的提示框，点击Yes即可自动打开link和后续功能</li>
-<li>增加路径不正确的弹窗提示</li>
-<li>增加其余8个自动化UV命令的自定义脚本，自动化脚本格式为###("cmd")，如fullAuto("pSphere*")表示对场景中所有带有pSphere的多边形进行自动化分UV</li>
-<li>修复部分自动化脚本传输失败的问题</li>
-</ul>
-<h6>v2020.082201</h6>
-<ul>
-<li>更新界面，添加菜单栏功能，将程序选择放入首选项中</li>
-<li>更新中文翻译</li>
-<li>更新插件打开方式为菜单栏</li>
-<li>添加Help和about的界面</li>
-<li>添加调试使用license</li>
-<li>添加自动化工具的选择和全局模式</li>
-<li>修复AutoLink部分传递失效</li>
-</ul>
-<h2>Issue - 已知问题</h2>
-<ul>
-<li>Maya2022使用LiveLink有几率崩溃</li>
-<li>Maya2014单击传递无效，需要二次点击传递</li>
-<li>不支持Zbrush Goz到Maya的物体进行修改UV</li>
-<li>RizomUV2018版自动化功能部分不兼容</li>
-<li>部分非标准节点模型传递会变形</li>
-</ul>
-<h2>Contact - 联系</h2>
-<p>在使用中有任何问题，欢迎反馈给我，可以用以下联系方式跟我交流
+</li>
+<li>Click and start the program to divide UV</li>
+<li>Click Pull when you need to send back to maya</li>
+</ol>
+<h3 class="mume-header" id="uvtool">UVTool</h3>
 
-</p>
 <ul>
-<li>邮件(32229170@qq.com)</li>
-<li>微信公众号(3DTech)</li>
-<li>QQ技术交流群: 76031183</li>
+<li>&#x4F7F;&#x7528;AutoCut&#x53EF;&#x4EE5;&#x81EA;&#x52A8;&#x5207;&#x5272;&#x6A21;&#x578B;UVShell&#xFF0C;&#x5982;&#x679C;&#x5728;Selection Mode&#x7684;&#x6A21;&#x5F0F;&#x4E0B;&#x5219;&#x662F;&#x5728;&#x9009;&#x62E9;&#x7684;Shell&#x4E2D;&#x5207;&#x5272;</li>
 </ul>
-<h2>Dos - 文档</h2>
+<hr>
 <ul>
-<li>最新更新:<a href="https://www.jianshu.com/p/d82f2b21b05a">https://www.jianshu.com/p/d82f2b21b05a</a></li>
-<li>用户帮助:<a href="https://www.jianshu.com/p/000663862bec">https://www.jianshu.com/p/000663862bec</a></li>
-<li>工具演示:<a href="https://www.jianshu.com/p/bcbdc83c1a65">https://www.jianshu.com/p/bcbdc83c1a65</a></li>
+<li>Use AutoCut to automatically cut the model UVShell, if it is in the Selection Mode mode, it will be cut in the selected Shell</li>
 </ul>
-<h2>Donor developer - 捐助开发者</h2>
-<p>在兴趣的驱动下,写一个<code>免费</code>的东西，有欣喜，也还有汗水，希望你喜欢我的作品，同时也能支持一下。
+<h3 class="mume-header" id="mayatool">MayaTool</h3>
 
-</p>
-<h2>Authors and acknowledgment - 贡献者和感谢</h2>
-<p>感谢以下,排名不分先后
+<h5 class="mume-header" id="select-similar">Select Similar</h5>
 
-</p>
 <ul>
-<li>余则成</li>
-<li>刘超</li>
+<li>&#x9009;&#x62E9;&#x76F8;&#x540C;&#x7684;&#x7269;&#x4F53;</li>
+</ul>
+<hr>
+<p>select the same object</p>
+<h5 class="mume-header" id="transfer-sectionuv">Transfer SectionUV</h5>
+
+<ul>
+<li>&#x5BF9;&#x9009;&#x62E9;&#x7684;&#x7269;&#x4F53;&#x8FDB;&#x884C;UV&#x4F20;&#x9012;&#xFF0C;&#x4EC5;&#x4F5C;&#x7528;&#x4E8E;&#x76F8;&#x540C;&#x62D3;&#x6251;</li>
+</ul>
+<hr>
+<ul>
+<li>Perform UV transfer on selected objects, only for the same topology</li>
+</ul>
+<h5 class="mume-header" id="livelink">LiveLink</h5>
+
+<ul>
+<li>&#x5F00;&#x542F;&#x5373;&#x53EF;&#x4F7F;&#x7528;&#x5B9E;&#x65F6;&#x5206;UV</li>
+</ul>
+<hr>
+<p>Turn on to use real-time UV separation</p>
+<h5 class="mume-header" id="scrpit">Scrpit</h5>
+
+<ul>
+<li>&#x53EF;&#x4EE5;&#x4F7F;&#x7528;&#x81EA;&#x5B9A;&#x4E49;&#x811A;&#x672C;&#x8FDB;&#x884C;&#x81EA;&#x52A8;&#x5316;&#x5904;&#x7406; <br>
+&#x5982;fullAuto(&quot;pSphere*&quot;) <br>
+&#x53C2;&#x7167;maya&#x7684;cmd&#x7684;&#x8BED;&#x6CD5;&#x4F7F;&#x7528;</li>
+</ul>
+<hr>
+<ul>
+<li>Can be automated using custom scripts <br>
+Such as fullAuto(&quot;pSphere*&quot;) <br>
+Refer to the syntax of maya&apos;s cmd to use</li>
+</ul>
+<br>
+<h2 class="mume-header" id="changelog-%E6%9B%B4%E6%96%B0%E6%97%A5%E5%BF%97">Changelog - &#x66F4;&#x65B0;&#x65E5;&#x5FD7;</h2>
+
+<h5 class="mume-header" id="v202242416-%E6%9C%80%E6%96%B0">V2022.4.24.16 &#x6700;&#x65B0;</h5>
+
+<ul>
+<li>&#x66F4;&#x65B9;&#x4FBF;&#x5FEB;&#x6377;&#x7684;&#x5B89;&#x88C5;&#xFF0C;&#x65E0;&#x9700;&#x65B0;&#x5EFA;modules&#x6587;&#x4EF6;&#x5939;&#xFF08;C&#x76D8;&#x6709;&#x6743;&#x9650;&#x64CD;&#x4F5C;&#x7684;&#x60C5;&#x51B5;&#x4E0B;&#xFF09;</li>
+<li>&#x81EA;&#x52A8;&#x8BC6;&#x522B;Rizomuv&#x5B89;&#x88C5;&#x8DEF;&#x5F84;&#xFF0C;&#x65E0;&#x7279;&#x6B8A;&#x60C5;&#x51B5;&#x4E0D;&#x7528;&#x8BBE;&#x7F6E;&#x3002;</li>
+<li>&#x7A33;&#x5B9A;&#x7684;LiveLink&#x5B9E;&#x65F6;&#x4E0E;Rizomuv&#x4EA4;&#x4E92;&#xFF0C;&#x9ED8;&#x8BA4;&#x5F00;&#x542F;&#x3002;</li>
+<li>&#x4FEE;&#x590D;&#x91CD;&#x540D;&#x65E0;&#x6CD5;&#x4E0B;&#x8F7D;&#x7684;BUG</li>
+<li>&#x4FEE;&#x590D;&#x6709;&#x51E0;&#x7387;&#x8F6F;&#x4EF6;&#x6B7B;&#x5FAA;&#x73AF;&#x6216;&#x8005;&#x5D29;&#x6E83;&#x7684;BUG</li>
+<li>&#x4F18;&#x5316;&#x4EE3;&#x7801;&#x903B;&#x8F91;&#xFF0C;&#x8FD0;&#x884C;&#x901F;&#x5EA6;&#x66F4;&#x5FEB;&#x4E14;&#x4E0D;&#x4F1A;&#x5361;&#x987F;</li>
+<li>&#x66F4;&#x65B0;&#x540E;&#x652F;&#x6301;Maya2023&#xFF0C;&#x4F46;&#x4EC5;&#x652F;&#x6301;Maya2017-Maya2023&#x7684;&#x7248;&#x672C;&#xFF0C;&#x4E0D;&#x652F;&#x6301;&#x5176;&#x4ED6;&#x7248;&#x672C;</li>
+<li>&#x9700;&#x8981;&#x6CE8;&#x610F;&#x6A21;&#x578B;&#x6709;&#x5386;&#x53F2;&#x65F6;&#x9700;&#x8981;&#x6E05;&#x9664;&#x6A21;&#x578B;&#x5386;&#x53F2;&#xFF0C;&#x5426;&#x5219;&#x6709;&#x53EF;&#x80FD;&#x65E0;&#x6CD5;&#x4E0B;&#x8F7D;UV</li>
+<li>&#x672C;&#x5730;&#x5316;&#x624B;&#x518C;&#xFF08;&#x82F1;&#x8BED;&#x548C;&#x4E2D;&#x6587;&#x4E0D;&#x540C;&#xFF09;</li>
+</ul>
+<hr>
+<h5 class="mume-header" id="v202242416-latest">V2022.4.24.16 Latest</h5>
+
+<ul>
+<li>More convenient installation, add a shortcut to the module folder (if the C drive has permission)</li>
+<li>Automatic identification of Rizomuv installation path, no need to set unless there are special circumstances.</li>
+<li>Stable real-time link with Rizom Live, enabled by default.</li>
+<li>Fix the bug that the same name cannot be downloaded</li>
+<li>Fix software bugs where the software has an infinite loop or crashes</li>
+<li>Optimize the code frame logic, run faster and not get stuck</li>
+<li>Maya2023 is supported after the update, but only Maya2017-Maya2023 versions are supported, other versions are not supported</li>
+<li>It should be noted that the model needs to be cleared when there is history, otherwise the UV may not be downloaded</li>
+<li>Localized manual (different in English and Chinese)</li>
+</ul>
+<h5 class="mume-header" id="v202141002">V2021.4.10.02</h5>
+
+<ul>
+<li>&#x66F4;&#x65B0;&#x652F;&#x6301;Maya2022,&#x5E76;&#x4E14;&#x5411;&#x4E0B;&#x517C;&#x5BB9;&#x81F3;Maya2014</li>
+<li>&#x4FEE;&#x6539;Web&#x94FE;&#x63A5;&#x4E3A;GitHub&#x53CA;&#x7F51;&#x76D8;</li>
+<li>&#x4FEE;&#x590D;&#x5B58;&#x5728;&#x547D;&#x540D;&#x76F8;&#x540C;&#x7269;&#x4F53;&#x65E0;&#x6CD5;&#x4F20;&#x9012;&#x7684;BUG</li>
+<li>&#x4FEE;&#x590D;&#x4F7F;&#x7528;&#x4E2D;&#x6587;&#x65E0;&#x6CD5;&#x901A;&#x8FC7;&#x529F;&#x80FD;&#x6309;&#x94AE;&#x542F;&#x52A8;&#x94FE;&#x63A5;&#x7684;BUG</li>
+<li>&#x4F18;&#x5316;&#x5B89;&#x88C5;&#x65B9;&#x5F0F;&#xFF0C;&#x6807;&#x51C6;&#x5B89;&#x88C5;&#x76EE;&#x5F55;&#x4E0B;&#x7B2C;&#x4E00;&#x6B21;&#x4F7F;&#x7528;&#x65E0;&#x9700;&#x521B;&#x5EFA;modules&#x6587;&#x4EF6;&#x5939;&#xFF0C;&#x5B9E;&#x73B0;&#x4E00;&#x952E;&#x5F0F;&#x5B89;&#x88C5;</li>
+<li>&#x4F18;&#x5316;&#x5B9E;&#x65F6;&#x94FE;&#x63A5;LiveLink&#x529F;&#x80FD;&#xFF0C;&#x63D0;&#x9AD8;&#x7A33;&#x5B9A;&#x6027;</li>
+<li>&#x4F18;&#x5316;&#x6539;&#x8FDB;&#x6807;&#x51C6;&#x529F;&#x80FD;&#x7684;&#x4F20;&#x9012;&#x529F;&#x80FD;</li>
+<li>&#x4F18;&#x5316;Node&#x4F20;&#x9012;&#x903B;&#x8F91;,&#x4EA4;&#x4E92;&#x901F;&#x5EA6;&#x63D0;&#x5347;30%</li>
+<li>&#x6C49;&#x5316;Log&#x63D0;&#x793A;&#x5185;&#x5BB9;</li>
+</ul>
+<hr>
+<h5 class="mume-header" id="v202141002-1">V2021.4.10.02</h5>
+
+<ul>
+<li>Updated to support Maya2022, and backward compatible to Maya2014</li>
+<li>Modify the web link to GitHub and network disk</li>
+<li>Fixed a bug where objects with the same name could not be passed</li>
+<li>Fix the bug that the link cannot be started through the function button in Chinese</li>
+<li>Optimized the installation method, the first use in the standard installation directory does not need to create a modules folder to achieve one-click installation</li>
+<li>Optimize the LiveLink function of real-time link to improve stability</li>
+<li>Optimize and improve the transfer function of standard functions</li>
+<li>Optimized Node delivery logic, increasing interaction speed by 30%</li>
+<li>Sinicized Log prompt content</li>
+</ul>
+<h6 class="mume-header" id="v2020111201">v2020.111201</h6>
+
+<ul>
+<li>&#x6DFB;&#x52A0;&#x5185;&#x90E8;&#x4E0B;&#x8F7D;&#x5730;&#x5740;&#xFF0C;&#x67E5;&#x770B;&#x4E00;&#x822C;&#x8BBE;&#x7F6E;&#x5373;&#x53EF;</li>
+<li>&#x4FEE;&#x590D;&#x4E2D;&#x82F1;&#x6587;&#x5207;&#x6362;&#x9519;&#x8BEF;&#x7684;&#x95EE;&#x9898;</li>
+</ul>
+<hr>
+<h6 class="mume-header" id="v2020111201-1">v2020.111201</h6>
+
+<ul>
+<li>Add the internal download address and check the general settings</li>
+<li>Fixed the problem of switching between Chinese and English</li>
+</ul>
+<h6 class="mume-header" id="v2020110503">v2020.110503</h6>
+
+<ul>
+<li>&#x6539;&#x8FDB;&#x6C49;&#x5316;&#xFF0C;&#x4FEE;&#x590D;&#x90E8;&#x5206;&#x56E0;&#x4E2D;&#x6587;&#x65E0;&#x6CD5;&#x8FD0;&#x884C;&#x7684;&#x95EE;&#x9898;&#xFF0C;&#x4EE5;&#x53CA;&#x6DFB;&#x52A0;&#x5B89;&#x88C5;&#x6210;&#x529F;&#x63D0;&#x793A;</li>
+<li>&#x6539;&#x8FDB;&#x4F7F;&#x7528;C&#x91CD;&#x6784;&#x63D2;&#x4EF6;&#xFF0C;&#x901F;&#x5EA6;&#x5927;&#x5E45;&#x5EA6;&#x63D0;&#x5347;</li>
+<li>&#x6DFB;&#x52A0;&#x589E;&#x5F3A;&#x529F;&#x80FD;&#x6309;&#x94AE;&#xFF0C;&#x9ED8;&#x8BA4;&#x5F00;&#x542F;&#xFF0C;&#x5F00;&#x542F;&#x60C5;&#x51B5;&#x4E0B;&#x65E0;&#x9700;&#x5728;rizomuv&#x624B;&#x52A8;&#x4FDD;&#x5B58;&#xFF0C;&#x5173;&#x95ED;&#x5219;&#x9700;&#x8981;&#x5728;rizomuv&#x4E2D;&#x8FDB;&#x884C;&#x624B;&#x52A8;&#x4FDD;&#x5B58;&#xFF0C;&#x4E5F;&#x4F1A;&#x4F7F;&#x5176;&#x4ED6;&#x9AD8;&#x7EA7;&#x529F;&#x80FD;&#x65E0;&#x6CD5;&#x4F7F;&#x7528;&#xFF0C;&#x9002;&#x7528;&#x4E8E;&#x589E;&#x5F3A;&#x529F;&#x80FD;&#x5728;&#x67D0;&#x4E9B;&#x60C5;&#x51B5;&#x65E0;&#x6CD5;&#x5BFC;&#x51FA;&#x7684;&#x60C5;&#x51B5;</li>
+<li>&#x6DFB;&#x52A0;&#x5237;&#x65B0;&#x6309;&#x94AE;&#xFF0C;&#x5982;&#x679C;&#x53D1;&#x73B0;&#x65E0;&#x6CD5;&#x62C9;&#x53D6;rizomuv&#x4E2D;&#x505A;&#x597D;&#x7684;uv&#x53EF;&#x4EE5;&#x5728;Preferences&#x83DC;&#x5355;&#x4E2D;&#x70B9;&#x51FB;&#x5237;&#x65B0;&#x3002;&#x6E05;&#x9664;&#x7F13;&#x5B58;&#x6309;&#x94AE;&#x5219;&#x662F;&#x5C06;&#x505A;&#x597D;&#x7684;&#x6587;&#x4EF6;&#x6E05;&#x9664;&#x7F13;&#x5B58;&#x6570;&#x636E;</li>
+</ul>
+<hr>
+<h6 class="mume-header" id="v2020110503-1">v2020.110503</h6>
+
+<ul>
+<li>Improve localization, fix some problems that cannot be run due to Chinese, and add a successful installation prompt</li>
+<li>Improve the use of C refactoring plugin, the speed is greatly improved</li>
+<li>Add an enhanced function button, which is enabled by default. It is not necessary to manually save in rizomuv when it is turned on. If it is turned off, it needs to be manually saved in rizomuv, which will also make other advanced functions unavailable. It is suitable for enhanced functions that cannot be exported in some cases</li>
+<li>Add a refresh button, if you find that you can&apos;t pull the uv prepared in rizomuv, you can click refresh in the Preferences menu. The clear cache button is to clear the cached data of the prepared files</li>
+</ul>
+<h6 class="mume-header" id="v2020082702">v2020.082702</h6>
+
+<ul>
+<li>&#x66F4;&#x65B0;&#x672A;&#x542F;&#x52A8;link&#x7684;&#x60C5;&#x51B5;&#x4E0B;&#x4F7F;&#x7528;&#x547D;&#x4EE4;&#x7684;&#x63D0;&#x793A;&#x6846;&#xFF0C;&#x70B9;&#x51FB;Yes&#x5373;&#x53EF;&#x81EA;&#x52A8;&#x6253;&#x5F00;link&#x548C;&#x540E;&#x7EED;&#x529F;&#x80FD;</li>
+<li>&#x589E;&#x52A0;&#x8DEF;&#x5F84;&#x4E0D;&#x6B63;&#x786E;&#x7684;&#x5F39;&#x7A97;&#x63D0;&#x793A;</li>
+<li>&#x589E;&#x52A0;&#x5176;&#x4F59;8&#x4E2A;&#x81EA;&#x52A8;&#x5316;UV&#x547D;&#x4EE4;&#x7684;&#x81EA;&#x5B9A;&#x4E49;&#x811A;&#x672C;&#xFF0C;&#x81EA;&#x52A8;&#x5316;&#x811A;&#x672C;&#x683C;&#x5F0F;&#x4E3A;###(&quot;cmd&quot;)&#xFF0C;&#x5982;fullAuto(&quot;pSphere*&quot;)&#x8868;&#x793A;&#x5BF9;&#x573A;&#x666F;&#x4E2D;&#x6240;&#x6709;&#x5E26;&#x6709;pSphere&#x7684;&#x591A;&#x8FB9;&#x5F62;&#x8FDB;&#x884C;&#x81EA;&#x52A8;&#x5316;&#x5206;UV</li>
+<li>&#x4FEE;&#x590D;&#x90E8;&#x5206;&#x81EA;&#x52A8;&#x5316;&#x811A;&#x672C;&#x4F20;&#x8F93;&#x5931;&#x8D25;&#x7684;&#x95EE;&#x9898;</li>
+</ul>
+<hr>
+<h6 class="mume-header" id="v2020082702-1">v2020.082702</h6>
+
+<ul>
+<li>Update the prompt box for using the command without starting the link, click Yes to automatically open the link and subsequent functions</li>
+<li>Add pop-up prompt for incorrect path</li>
+<li>Added custom scripts for the remaining 8 automated UV commands. The automated script format is ###(&quot;cmd&quot;), such as fullAuto(&quot;pSphere*&quot;), which means to automatically divide UV for all polygons with pSphere in the scene</li>
+<li>Fixed the problem that some automated scripts failed to transfer</li>
+</ul>
+<h6 class="mume-header" id="v2020082201">v2020.082201</h6>
+
+<ul>
+<li>&#x66F4;&#x65B0;&#x754C;&#x9762;&#xFF0C;&#x6DFB;&#x52A0;&#x83DC;&#x5355;&#x680F;&#x529F;&#x80FD;&#xFF0C;&#x5C06;&#x7A0B;&#x5E8F;&#x9009;&#x62E9;&#x653E;&#x5165;&#x9996;&#x9009;&#x9879;&#x4E2D;</li>
+<li>&#x66F4;&#x65B0;&#x4E2D;&#x6587;&#x7FFB;&#x8BD1;</li>
+<li>&#x66F4;&#x65B0;&#x63D2;&#x4EF6;&#x6253;&#x5F00;&#x65B9;&#x5F0F;&#x4E3A;&#x83DC;&#x5355;&#x680F;</li>
+<li>&#x6DFB;&#x52A0;Help&#x548C;about&#x7684;&#x754C;&#x9762;</li>
+<li>&#x6DFB;&#x52A0;&#x8C03;&#x8BD5;&#x4F7F;&#x7528;license</li>
+<li>&#x6DFB;&#x52A0;&#x81EA;&#x52A8;&#x5316;&#x5DE5;&#x5177;&#x7684;&#x9009;&#x62E9;&#x548C;&#x5168;&#x5C40;&#x6A21;&#x5F0F;</li>
+<li>&#x4FEE;&#x590D;AutoLink&#x90E8;&#x5206;&#x4F20;&#x9012;&#x5931;&#x6548;</li>
+</ul>
+<hr>
+<h6 class="mume-header" id="v2020082201-1">v2020.082201</h6>
+
+<ul>
+<li>Updated interface, added menu bar function, put program selection into preferences</li>
+<li>Updated Chinese translation</li>
+<li>Update the plugin to open the menu bar</li>
+<li>Add Help and about interface</li>
+<li>Add debugging license</li>
+<li>Add selection and global mode for automation tools</li>
+<li>Fix AutoLink partial delivery failure</li>
+</ul>
+<br>
+<h2 class="mume-header" id="issue-%E5%B7%B2%E7%9F%A5%E9%97%AE%E9%A2%98">Issue - &#x5DF2;&#x77E5;&#x95EE;&#x9898;</h2>
+
+<ul>
+<li>RizomUV2018&#x7248;&#x81EA;&#x52A8;&#x5316;&#x529F;&#x80FD;&#x90E8;&#x5206;&#x4E0D;&#x517C;&#x5BB9;</li>
+</ul>
+<hr>
+<ul>
+<li>The automation function of RizomUV2018 version is partially incompatible</li>
+</ul>
+<br>
+<h2 class="mume-header" id="contact-%E8%81%94%E7%B3%BB">Contact - &#x8054;&#x7CFB;</h2>
+
+<p>&#x5728;&#x4F7F;&#x7528;&#x4E2D;&#x6709;&#x4EFB;&#x4F55;&#x95EE;&#x9898;&#xFF0C;&#x6B22;&#x8FCE;&#x53CD;&#x9988;&#x7ED9;&#x6211;&#xFF0C;&#x53EF;&#x4EE5;&#x7528;&#x4EE5;&#x4E0B;&#x8054;&#x7CFB;&#x65B9;&#x5F0F;&#x8DDF;&#x6211;&#x4EA4;&#x6D41;</p>
+<ul>
+<li>&#x90AE;&#x4EF6;(<a href="mailto:32229170@qq.com">32229170@qq.com</a>)</li>
+<li>bilibili : <a href="https://space.bilibili.com/3415436?spm_id_from=333.1007.0.0">https://space.bilibili.com/3415436?spm_id_from=333.1007.0.0</a></li>
+<li>&#x5FAE;&#x4FE1;&#x516C;&#x4F17;&#x53F7;(3DTech)</li>
+<li>QQ&#x6280;&#x672F;&#x4EA4;&#x6D41;&#x7FA4;: 76031183</li>
+<li></li>
+</ul>
+<hr>
+<p>If you have any questions in use, please give me feedback, you can communicate with me using the following contact information</p>
+<ul>
+<li>Email : <a href="mailto:32229170@qq.com">32229170@qq.com</a></li>
+<li>YouTube : <a href="https://www.youtube.com/channel/UCSwqj6r0rUDeGH42DmlwhrA">https://www.youtube.com/channel/UCSwqj6r0rUDeGH42DmlwhrA</a></li>
+<li>WeChat public account : 3DTech</li>
+<li>QQ Group: 76031183</li>
+</ul>
+<br>
+<h2 class="mume-header" id="dos-%E6%96%87%E6%A1%A3">Dos - &#x6587;&#x6863;</h2>
+
+<ul>
+<li>&#x6700;&#x65B0;&#x66F4;&#x65B0; : <a href="https://www.jianshu.com/p/d82f2b21b05a">https://www.jianshu.com/p/d82f2b21b05a</a></li>
+<li>&#x7528;&#x6237;&#x5E2E;&#x52A9; : <a href="https://www.jianshu.com/p/000663862bec">https://www.jianshu.com/p/000663862bec</a></li>
+<li>&#x5DE5;&#x5177;&#x6F14;&#x793A; : <a href="https://www.jianshu.com/p/bcbdc83c1a65">https://www.jianshu.com/p/bcbdc83c1a65</a></li>
+<li>GitHub : <a href="https://github.com/3DTech-Steven7/MayaToRizomuv">https://github.com/3DTech-Steven7/MayaToRizomuv</a></li>
+</ul>
+<hr>
+<ul>
+<li>Latest update : <a href="https://www.jianshu.com/p/d82f2b21b05a">https://www.jianshu.com/p/d82f2b21b05a</a></li>
+<li>User Help : <a href="https://www.jianshu.com/p/000663862bec">https://www.jianshu.com/p/000663862bec</a></li>
+<li>Tool demo: <a href="https://www.jianshu.com/p/bcbdc83c1a65">https://www.jianshu.com/p/bcbdc83c1a65</a></li>
+<li>GitHub: <a href="https://github.com/3DTech-Steven7/MayaToRizomuv">https://github.com/3DTech-Steven7/MayaToRizomuv</a></li>
+</ul>
+<br>
+<h2 class="mume-header" id="donor-developer-%E6%8D%90%E5%8A%A9%E5%BC%80%E5%8F%91%E8%80%85">Donor developer - &#x6350;&#x52A9;&#x5F00;&#x53D1;&#x8005;</h2>
+
+<p>&#x5728;&#x5174;&#x8DA3;&#x7684;&#x9A71;&#x52A8;&#x4E0B;,&#x5199;&#x4E00;&#x4E2A;<code>&#x514D;&#x8D39;</code>&#x7684;&#x4E1C;&#x897F;&#xFF0C;&#x6709;&#x6B23;&#x559C;&#xFF0C;&#x4E5F;&#x8FD8;&#x6709;&#x6C57;&#x6C34;&#xFF0C;&#x5E0C;&#x671B;&#x4F60;&#x559C;&#x6B22;&#x6211;&#x7684;&#x5DE5;&#x4F5C;&#xFF0C;&#x540C;&#x65F6;&#x4E5F;&#x80FD;&#x652F;&#x6301;&#x4E00;&#x4E0B;&#x3002;</p>
+<hr>
+<p>Driven by interest, writing a <code>free</code> thing, there is joy and sweat, I hope you like my work, and you can also support it.</p>
+<br>
+<h2 class="mume-header" id="authors-and-acknowledgment-%E8%B4%A1%E7%8C%AE%E8%80%85%E5%92%8C%E6%84%9F%E8%B0%A2">Authors and acknowledgment - &#x8D21;&#x732E;&#x8005;&#x548C;&#x611F;&#x8C22;</h2>
+
+<p>&#x611F;&#x8C22;&#x4EE5;&#x4E0B;,&#x6392;&#x540D;&#x4E0D;&#x5206;&#x5148;&#x540E;</p>
+<ul>
+<li>&#x6211;&#x6771;</li>
+<li>&#x4F59;&#x5219;&#x6210;</li>
+<li>&#x5218;&#x8D85;</li>
 <li>chenclean</li>
 <li>The dead is comin</li>
-<li>香蕉橘子西瓜汁</li>
-<li>北海公瑾</li>
-<li>金王斌</li>
+<li>&#x9999;&#x8549;&#x6A58;&#x5B50;&#x897F;&#x74DC;&#x6C41;</li>
+<li>&#x5317;&#x6D77;&#x516C;&#x747E;</li>
+<li>&#x91D1;&#x738B;&#x658C;</li>
 </ul>
-<h2>License - 版权信息</h2>
-<p>该项目签署了GNU General Public License v3.0 授权许可，详情请参阅 LICENSE.md
-</p>
-<h3>关于作者</h3>
-<p>Steven7
+<hr>
+<p>Thanks for the following, in no particular order</p>
+<ul>
+<li>Wo Dong</li>
+<li>Yu Zecheng</li>
+<li>Liu Chao</li>
+<li>chenclean</li>
+<li>The dead is comin</li>
+<li>Banana Orange Watermelon Juice</li>
+<li>Beihai Gongjin</li>
+<li>Jin Wangbin</li>
+</ul>
+<br>
+<h2 class="mume-header" id="license-%E7%89%88%E6%9D%83%E4%BF%A1%E6%81%AF">License - &#x7248;&#x6743;&#x4FE1;&#x606F;</h2>
 
-</p>
-</body></html>
+<p>&#x8BE5;&#x9879;&#x76EE;&#x7B7E;&#x7F72;&#x4E86;GNU General Public License v3.0 &#x6388;&#x6743;&#x8BB8;&#x53EF;&#xFF0C;&#x8BE6;&#x60C5;&#x8BF7;&#x53C2;&#x9605; <a href="http://LICENSE.md">LICENSE.md</a></p>
+<hr>
+<p>The project is licensed under the GNU General Public License v3.0, see <a href="http://LICENSE.md">LICENSE.md</a> for details</p>
+<br>
+<h2 class="mume-header" id="about-the-author-%E5%85%B3%E4%BA%8E%E4%BD%9C%E8%80%85">About the author - &#x5173;&#x4E8E;&#x4F5C;&#x8005;</h2>
+
+<p>Steven7</p>
+
+      </div>
+      
+      
+    
+    
+    
+    
+    
+    
+    
+    
+  
+    </body></html>
