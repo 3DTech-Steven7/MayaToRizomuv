@@ -7,7 +7,7 @@
 
 This is a tool that can split UVs between RizomUVs and Maya in real time.
 
-<img src="images/demo.gif" width = "700">
+<img src="images/demo.gif">
 
 <br/>
 
