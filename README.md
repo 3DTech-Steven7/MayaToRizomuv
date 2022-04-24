@@ -134,7 +134,7 @@ Refer to the syntax of maya's cmd to use
 
 <br/>
 
-## Changelog - 更新日志
+## Updatelog - 更新日志
 ##### V2022.4.24.16 最新
 * 更方便快捷的安装，无需新建modules文件夹（C盘有权限操作的情况下）
 * 自动识别Rizomuv安装路径，无特殊情况不用设置。
