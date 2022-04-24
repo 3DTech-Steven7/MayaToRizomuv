@@ -63,7 +63,8 @@ This is a tool that can split UVs between RizomUVs and Maya in real time.
 ### Maya2022及Maya2023使用时需要安装PyMel3
 * PyMel3 needs to be installed when using Maya2022 and Maya2023
 
-1
+<img src="images/20598323-8e6aa61e3dc74519.webp" width = "700">
+
 <br/>
 
 ## Usage - 用法
