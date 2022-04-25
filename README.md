@@ -14,6 +14,7 @@ This is a tool that can split UVs between RizomUVs and Maya in real time.
 ## Features - 特性
 
 * 方便的`交互式分UV`功能
+* 独特的`双向传递UV`功能
 * 工具省去相互导入导出的操作，`快捷高效`
 * 编辑和预览`同步`，所见即所得
 * 模型只需保存即可自动化传递UV，`制作效率高错误几率小`
@@ -26,6 +27,7 @@ This is a tool that can split UVs between RizomUVs and Maya in real time.
 ---
 
 * Convenient `interactive UV split` function
+* Unique 'bidirectional UV transmission' function
 * The tool saves the operation of importing and exporting each other, `fast and efficient`
 * Edit and preview `sync`, WYSIWYG
 * The model can automatically transfer UVs just by saving, `high production efficiency and small error probability`
@@ -63,8 +65,7 @@ This is a tool that can split UVs between RizomUVs and Maya in real time.
 ### Maya2022及Maya2023使用时需要安装PyMel3
 * PyMel3 needs to be installed when using Maya2022 and Maya2023
 
-<img src="images/20598323-8e6aa61e3dc74519.webp" width = "700">
-
+1
 <br/>
 
 ## Usage - 用法
@@ -135,7 +136,25 @@ Refer to the syntax of maya's cmd to use
 <br/>
 
 ## Updatelog - 更新日志
-##### V2022.4.24.16 最新
+##### V2022.4.25.04 最新
+* 修复按键无法正确Link的问题
+* 支持Maya分UV，并自动更新到Rizomuv
+* 添加双向传递的功能，支持部分自动传递(Rizomuv性能会受影响)
+* 修复无法正确选择物体的Bug
+* 修复OS Native模式下无法传递UV的Bug
+* 优化传递UV运行逻辑
+
+---
+
+##### V2022.4.25.04 Latest
+*Fix the problem that the key does not link correctly
+*Support Maya to divide UVs and automatically update to rizomuv
+*Add the function of two-way delivery and support partial automatic delivery (rizomuv performance will be affected)
+*Fix bug that cannot select object correctly
+*Fix bug that cannot transfer UVs in OS native mode
+*Optimize transfer UV operation logic
+
+##### V2022.4.23.16
 * 更方便快捷的安装，无需新建modules文件夹（C盘有权限操作的情况下）
 * 自动识别Rizomuv安装路径，无特殊情况不用设置。
 * 稳定的LiveLink实时与Rizomuv交互，默认开启。
@@ -148,7 +167,7 @@ Refer to the syntax of maya's cmd to use
 
 ---
 
-##### V2022.4.24.16 Latest
+##### V2022.4.23.16
 * More convenient installation, add a shortcut to the module folder (if the C drive has permission)
 * Automatic identification of Rizomuv installation path, no need to set unless there are special circumstances.
 * Stable real-time link with Rizom Live, enabled by default.
