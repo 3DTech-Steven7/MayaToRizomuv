@@ -147,12 +147,12 @@ Refer to the syntax of maya's cmd to use
 ---
 
 ##### V2022.4.25.04 Latest
-*Fix the problem that the key does not link correctly
-*Support Maya to divide UVs and automatically update to rizomuv
-*Add the function of two-way delivery and support partial automatic delivery (rizomuv performance will be affected)
-*Fix bug that cannot select object correctly
-*Fix bug that cannot transfer UVs in OS native mode
-*Optimize transfer UV operation logic
+* Fix the problem that the key does not link correctly
+* Support Maya to divide UVs and automatically update to rizomuv
+* Add the function of two-way delivery and support partial automatic delivery (rizomuv performance will be affected)
+* Fix bug that cannot select object correctly
+* Fix bug that cannot transfer UVs in OS native mode
+* Optimize transfer UV operation logic
 
 ##### V2022.4.23.16
 * 更方便快捷的安装，无需新建modules文件夹（C盘有权限操作的情况下）
