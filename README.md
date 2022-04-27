@@ -52,6 +52,7 @@ This is a tool that can split UVs between RizomUVs and Maya in real time.
 </br>
 
 <img src="images/installtool.png">
+
 ### Automatic installation - 自动安装
 0. 使用前需要检查电脑是否有管理员权限
 1. 点击MayaToRizomUV文件夹中的install_modules.cmd进行安装
@@ -66,6 +67,7 @@ This is a tool that can split UVs between RizomUVs and Maya in real time.
 </br>
 
 <img src="images/2321322121215.png">
+
 ### Manual installation - 手动安装
 1. 点击MayaToRizomUV文件夹中的install_modules.cmd进行安装
 2. 在MayaToRizomUV文件夹中找到modules文件夹，复制到我的文档中Maya文件夹下
