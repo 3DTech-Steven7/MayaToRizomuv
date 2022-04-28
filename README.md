@@ -12,9 +12,7 @@ This is a tool that can split UVs between RizomUVs and Maya in real time.
 </br>
 
 ---
-
 ## Features - 特性
-
 * 方便的`交互式分UV`功能
 * 独特的`双向传递UV`功能
 * 工具省去相互导入导出的操作，`快捷高效`
@@ -22,7 +20,7 @@ This is a tool that can split UVs between RizomUVs and Maya in real time.
 * 模型只需保存即可自动化传递UV，`制作效率高错误几率小`
 * 强大的`自动化分UV`功能，快速实现效果
 * 实时操作修改模型UV，`交互效率高`
-* 完美兼容`Maya2017-Maya2023`多版本
+* 完美兼容**Maya2017.5-Maya2023**多版本
 * 具有多项传递、选择边线等功能，`功能丰富强大`
 * 快捷的`一键式`安装的插件
   
@@ -35,7 +33,7 @@ This is a tool that can split UVs between RizomUVs and Maya in real time.
 * The model can automatically transfer UVs just by saving, `high production efficiency and small error probability`
 * Powerful `Automated UV` function to quickly achieve the effect
 * Real-time operation to modify model UV, `high interaction efficiency`
-* Perfectly compatible with `Maya2017-Maya2023` versions
+* Perfectly compatible with **Maya2017.5-Maya2023** versions
 * With multiple functions such as transfer and edge selection, `rich and powerful`
 * Quick `one-click` installation of plugins
 
@@ -44,24 +42,26 @@ This is a tool that can split UVs between RizomUVs and Maya in real time.
 ---
 
 ## Installation - 安装
-#### Maya2022及Maya2023使用时需要在Maya安装时安装PyMel3
-* When using Maya2022 and Maya2023, you need to install PyMel3 when installing Maya
 
+#### Maya2022及Maya2023使用时需要在Maya安装时安装PyMel3
+或者使用安装目录下的**Install_PyMel.cmd**安装
+* When using Maya2022 and Maya2023, you need to install PyMel3 when installing Maya
+Or use **Install_PyMel.cmd** in the installation directory to install
 <img src="images/20598323-8e6aa61e3dc74519.webp" width = "700">
 
 </br>
 
+### Automatic installation - 自动安装
 <img src="images/installtool.png">
 
-### Automatic installation - 自动安装
 0. 使用前需要检查电脑是否有管理员权限
-1. 点击MayaToRizomUV文件夹中的install_modules.cmd进行安装
+1. 点击MayaToRizomUV文件夹中的**install.cmd**进行安装
 2. 出现Install Successful表示安装成功
 
 </br>
 
 0. Before use, you need to check whether the computer has administrator privileges
-1. Click install_modules.cmd in the MayaToRizomUV folder to install
+1. Click **install.cmd** in the MayaToRizomUV folder to install
 2. If Install Successful appears, the installation is successful.
 
 </br>
@@ -69,12 +69,12 @@ This is a tool that can split UVs between RizomUVs and Maya in real time.
 <img src="images/2321322121215.png">
 
 ### Manual installation - 手动安装
-1. 点击MayaToRizomUV文件夹中的install_modules.cmd进行安装
+1. 点击MayaToRizomUV文件夹中的**install.cmd**进行安装
 2. 在MayaToRizomUV文件夹中找到modules文件夹，复制到我的文档中Maya文件夹下
 
 </br>
 
-1. Click install_modules.cmd in the MayaToRizomUV folder to install
+1. Click **install.cmd** in the MayaToRizomUV folder to install
 2. Find the modules folder in the MayaToRizomUV folder and copy it to the Maya folder in My Documents
 
 </br>
@@ -274,7 +274,7 @@ mtor.open_tool_window()
 * 修复部分因我的文档地址不在C盘导致的软件安装失败
 * 本地化用户帮助
 
-##### V2.2.0 Latest
+##### V2.2.0
 * Support change operation all recognition
 * Upload UV and Download UV and fully automated support, operations that can be used
 * Repair part of the software installation failure caused by the fact that my document address is not in the C drive
