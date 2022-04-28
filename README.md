@@ -256,12 +256,22 @@ mtor.open_tool_window()
 ---
 
 ## Updatelog - 更新日志
-##### V2.2.1 最新
+##### V2.2.2 最新
+* 增加未安装Pymel会报错提示
+* 添加自动安装Pymel脚本
+
+##### V2.2.2 Latest
+* Adding an error prompt if pymel is not installed
+* Add auto install pymel script
+  
+</br>
+
+##### V2.2.1
 * 修复未安装Rizomuv会报错的BUG
 * 添加独立窗口接口函数
 * 本地化提示文本
 
-##### V2.2.1 Latest
+##### V2.2.1
 * Fix the bug that will report an error if rizomuv is not installed
 * Add independent window interface function
 * Localized prompt text
