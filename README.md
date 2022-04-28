@@ -240,10 +240,35 @@ Refer to the syntax of maya's cmd to use
 
 </br>
 
+#### Tools can access independent window script examples - 工具可接入独立窗口脚本示例
+##### Maya2017.5 - 2020
+from mtor27 import mainwindow as mtor
+mtor.open_tool_window()
+##### Maya2022
+from mtor37 import mainwindow as mtor
+mtor.open_tool_window()
+##### Maya2023
+from mtor37 import mainwindow as mtor
+mtor.open_tool_window()
+
+</br>
+
 ---
 
 ## Updatelog - 更新日志
-##### V2.2.0 最新
+##### V2.2.1 最新
+* 修复未安装Rizomuv会报错的BUG
+* 添加独立窗口接口函数
+* 本地化提示文本
+
+##### V2.2.1 Latest
+* Fix the bug that will report an error if rizomuv is not installed
+* Add independent window interface function
+* Localized prompt text
+
+</br>
+
+##### V2.2.0
 * 双向传递支持所有操作识别传递
 * 上传UV和下载UV以及全自动化支持快捷键，可以更快的操作
 * 修复部分因我的文档地址不在C盘导致的软件安装失败

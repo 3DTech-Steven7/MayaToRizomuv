@@ -469,10 +469,33 @@ Such as fullAuto(&quot;pSphere*&quot;) <br>
 Refer to the syntax of maya&apos;s cmd to use</li>
 </ul>
 <br>
+<h4 class="mume-header" id="tools-can-access-independent-window-script-examples">Tools can access independent window script examples</h4>
+
+<h5 class="mume-header" id="maya20175-2020">Maya2017.5 - 2020</h5>
+
+<p>from mtor27 import mainwindow as mtor<br>
+mtor.open_tool_window()</p>
+<h5 class="mume-header" id="maya2022">Maya2022</h5>
+
+<p>from mtor37 import mainwindow as mtor<br>
+mtor.open_tool_window()</p>
+<h5 class="mume-header" id="maya2023">Maya2023</h5>
+
+<p>from mtor37 import mainwindow as mtor<br>
+mtor.open_tool_window()</p>
+<br>
 <hr>
 <h2 class="mume-header" id="updatelog">Updatelog</h2>
 
-<h5 class="mume-header" id="v220-latest">V2.2.0 Latest</h5>
+<h5 class="mume-header" id="v221-latest">V2.2.1 Latest</h5>
+
+<ul>
+<li>Fix the bug that will report an error if rizomuv is not installed</li>
+<li>Add independent window interface function</li>
+<li>Localized prompt text</li>
+</ul>
+<br>
+<h5 class="mume-header" id="v220">V2.2.0</h5>
 
 <ul>
 <li>Support change operation all recognition</li>
