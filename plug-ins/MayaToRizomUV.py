@@ -35,7 +35,7 @@ def initializePlugin(mobject):
     :param plugin: MObject used to register the plugin using an MFnPlugin function set
     """
     vendor = "Steven Qiu"
-    version = "2022.042316"
+    version = "2.2.3"
     mplugin = ompx.MFnPlugin(mobject, vendor, version)
     mtor.initialize()
 
