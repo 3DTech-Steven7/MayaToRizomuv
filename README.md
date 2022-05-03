@@ -7,7 +7,7 @@
 
 This is a tool that can split UVs between RizomUVs and Maya in real time.
 
-<img src="images/demo.gif">
+<img src="images/demo.webp">
 
 </br>
 
@@ -52,7 +52,7 @@ Or use **Install_PyMel.cmd** in the installation directory to install
 </br>
 
 ### Automatic installation - 自动安装
-<img src="images/installtool.png">
+<img src="images/installtool.webp">
 
 0. 使用前需要检查电脑是否有管理员权限
 1. 点击MayaToRizomUV文件夹中的**install.cmd**进行安装
@@ -66,7 +66,7 @@ Or use **Install_PyMel.cmd** in the installation directory to install
 
 </br>
 
-<img src="images/2321322121215.png">
+<img src="images/2321322121215.webp">
 
 ### Manual installation - 手动安装
 1. 点击MayaToRizomUV文件夹中的**install.cmd**进行安装
@@ -84,7 +84,7 @@ Or use **Install_PyMel.cmd** in the installation directory to install
 ## Usage - 用法
 ###### Specifically search for mayatorizomuv in YouTube - 具体在B站搜索mayatorizomuv
 ### First use - 第一次使用
-<img src="images/opentool.gif">
+<img src="images/opentool.webp">
 
 1. 重开Maya后找到在Windows-Setting/Perferences中的Plug-in Manager，搜索MayaToRizomuv.py插件点击Loaded进行使用
 2. 找到窗口上方布局的工具按钮并点击
@@ -94,7 +94,7 @@ Or use **Install_PyMel.cmd** in the installation directory to install
 1. After reopening Maya, find the Plug-in Manager in Windows-Settings/Perferences, search for the MayaToRizomuv.py plugin and click Loaded to use it
 2. Find the tool button in the layout above the window and click
 
-<img src="images/setpath.gif">
+<img src="images/setpath.webp">
 
 - 自动查找Rizomuv路径，可不设置路径
 1. * 可以直接点击Send Link
@@ -124,9 +124,10 @@ Or use **Install_PyMel.cmd** in the installation directory to install
 
 ---
 
-<img src="images/M4JAJYXA9W.png">
+<img src="images/M4JAJYXA9W.webp">
 
 </br>
+
 ### Send Link / Stop Linking - 发送连接请求 / 中断链接
 * 发送连接请求开启Maya和Rizomuv的连接，可以在软件中修改UV，中断链接则会关闭Rizomuv
 * Send a connection request to open the connection between Maya and rizomuv, you can modify the UVs in the software, and breaking the link will close rizomuv
@@ -205,31 +206,43 @@ Or use **Install_PyMel.cmd** in the installation directory to install
 * select UV edge
 
 </br>
+
 ##### Select HardEdge - 选择硬边
 * 选择硬边
 * Select hard edge
 
 </br>
+
 ##### Select Similar - 选择相似模型
 * 选择相同的物体
 * select the same object
 
 </br>
+
 ##### Transfer SectionUV - 传递选择的UV
 * 对选择的物体进行UV传递，仅作用于相同拓扑
 * Perform UV transfer on selected objects, only for the same topology
 
 </br>
+
 ##### LiveLink - 实时链接模式
 * 开启即可使用实时修改UV
 * Turn on to modify UVs in real time
 
 </br>
+
 ##### Bidirectional Update(Beta) - 双向传递(测试版)
 * 开启即在RizomUV中自动将UV信息传递回Maya
 * When on, UV information is automatically transferred back to Maya in rizomuv
 
 </br>
+
+##### Classic Modified UVs - 经典修改UV
+* 开启则使用属性传递UV，关闭则使用MeshShape传递UV
+* Turn on to use attributes to transfer UVs, and turn off to use MeshShape to transfer UVs
+
+</br>
+
 ##### Scrpit - 脚本
 * 可以使用自定义脚本进行自动化处理 \
 如fullAuto("pSphere*") \
@@ -256,11 +269,25 @@ mtor.open_tool_window()
 ---
 
 ## Updatelog - 更新日志
-##### V2.2.2 最新
+##### V2.2.3 最新
+* 更新UV传递方式，默认开启经典修改UV则使用属性传递UV；关闭则使用MeshShape传递UV，可能会导致物体变形和材质丢失
+* 增加自动开启插件Mel，安装插件后拖入Mel即可安装
+* 因不支持低版本Maya而移除增强模式的选项，现默认为增加模式，原增强模式开关替换为经典修改UV
+* 统一开启链接的接口，开启前不允许除开启链接按钮以外的方式开启，以增强稳定性
+
+##### V2.2.3 Latest
+* Update the UV transfer method. By default, if Classic Modified UV is turned on, it will use attributes to transfer UV; if it is turned off, MeshShape will be used to transfer UV, which may cause object deformation and material loss.
+* Add the automatic open plug-in Mel, after installing the plug-in, drag it into Mel to install
+* The option to remove the enhanced mode because it does not support the lower version of Maya, now the default is the enhanced mode, and the original enhanced mode switch is replaced with the classic modified UV
+* Unify the interface for opening the link. Before opening, it is not allowed to open the interface other than the open link button to enhance stability.
+  
+</br>
+
+##### V2.2.2
 * 增加未安装Pymel会报错提示
 * 添加自动安装Pymel脚本
 
-##### V2.2.2 Latest
+##### V2.2.2
 * Adding an error prompt if pymel is not installed
 * Add auto install pymel script
   

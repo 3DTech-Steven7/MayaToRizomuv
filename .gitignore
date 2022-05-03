@@ -127,3 +127,4 @@ dmypy.json
 
 # Pyre type checker
 .pyre/
+/安装后拖拽到Maya自动开启插件.mel

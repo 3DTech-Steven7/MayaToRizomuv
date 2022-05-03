@@ -1,0 +1,2 @@
+loadPlugin "MayaToRizomUV.py";
+pluginInfo -edit -autoload true "MayaToRizomUV.py";
