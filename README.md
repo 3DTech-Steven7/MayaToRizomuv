@@ -269,13 +269,21 @@ mtor.open_tool_window()
 ---
 
 ## Updatelog - 更新日志
-##### V2.2.3 最新
+##### V2.2.4  最新
+* 修复中文路径无法传递BUG
+
+##### V2.2.4 Latest
+* Fix the bug that the Chinese path cannot be passed
+
+</br>
+
+##### V2.2.3
 * 更新UV传递方式，默认开启经典修改UV则使用属性传递UV；关闭则使用MeshShape传递UV，可能会导致物体变形和材质丢失
 * 增加自动开启插件Mel，安装插件后拖入Mel即可安装
 * 因不支持低版本Maya而移除增强模式的选项，现默认为增加模式，原增强模式开关替换为经典修改UV
 * 统一开启链接的接口，开启前不允许除开启链接按钮以外的方式开启，以增强稳定性
 
-##### V2.2.3 Latest
+##### V2.2.3
 * Update the UV transfer method. By default, if Classic Modified UV is turned on, it will use attributes to transfer UV; if it is turned off, MeshShape will be used to transfer UV, which may cause object deformation and material loss.
 * Add the automatic open plug-in Mel, after installing the plug-in, drag it into Mel to install
 * The option to remove the enhanced mode because it does not support the lower version of Maya, now the default is the enhanced mode, and the original enhanced mode switch is replaced with the classic modified UV
