@@ -463,10 +463,22 @@ selected shell</li>
 <li>When on, UV information is automatically transferred back to Maya in rizomuv</li>
 </ul>
 <br>
-<h5 class="mume-header" id="classic-modified-uvs">Classic Modified UVs</h5>
+<h5 class="mume-header" id="uv-mode">UV Mode</h5>
+
+<h6 class="mume-header" id="replace">Replace</h6>
 
 <ul>
-<li>Turn on to use attributes to transfer UVs, and turn off to use MeshShape to transfer UVs</li>
+<li>If enabled, the original lighting is eliminated and the new field of view after UV is used. This method is used by default.</li>
+</ul>
+<h6 class="mume-header" id="attribute">Attribute</h6>
+
+<ul>
+<li>If enabled, use attributes to transfer UVs. If the number of object faces is too large, Maya may crash and the operating efficiency is low, but it can solve the problem of MeshShape transfer deformation and material loss. This is Maya&apos;s method of transferring attributes.</li>
+</ul>
+<h6 class="mume-header" id="meshshape">MeshShape</h6>
+
+<ul>
+<li>If enabled, use MeshShape to transfer UV, without changing object properties, by modifying MeshShape, this method is the method used by the old version of this plug-in</li>
 </ul>
 <br>
 <h5 class="mume-header" id="scrpit">Scrpit</h5>
@@ -495,7 +507,14 @@ mtor.open_tool_window()</p>
 <hr>
 <h2 class="mume-header" id="updatelog">Updatelog</h2>
 
-<h5 class="mume-header" id="v224-latest">V2.2.4 Latest</h5>
+<h5 class="mume-header" id="v230-latest">V2.3.0 Latest</h5>
+
+<ul>
+<li>The way to update the Uv transfer is to replace the object, attribute transfer, MeshShape. For details, see the UV transfer mode in the document</li>
+<li>It is recommended to upgrade this version from the previous version 2.2.2, and the version 2.2.3 - 2.2.4 must be upgraded to this version, otherwise the classic transfer transfer may cause a crash. For the specific reason, please refer to the UV transfer mode in the document.</li>
+</ul>
+<br>
+<h5 class="mume-header" id="v224">V2.2.4</h5>
 
 <ul>
 <li>Fix the bug that the Chinese path cannot be passed</li>

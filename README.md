@@ -237,9 +237,22 @@ Or use **Install_PyMel.cmd** in the installation directory to install
 
 </br>
 
-##### Classic Modified UVs - 经典修改UV
-* 开启则使用属性传递UV，关闭则使用MeshShape传递UV
-* Turn on to use attributes to transfer UVs, and turn off to use MeshShape to transfer UVs
+##### UV Mode - UV传递模式
+
+###### Replace - 替换物体
+
+* 开启则把原物体删除而使用修改UV后的新物体，默认使用这种方式
+* If enabled, the original lighting is eliminated and the new field of view after UV is used. This method is used by default.
+
+###### Attribute - 属性传递
+
+* 开启则使用属性传递UV，若物体面数过大可能导致Maya崩溃，运行效率较低，但能解决MeshShape传递变形和材质丢失，这种是Maya传递属性的方法
+* If enabled, use attributes to transfer UVs. If the number of object faces is too large, Maya may crash and the operating efficiency is low, but it can solve the problem of MeshShape transfer deformation and material loss. This is Maya's method of transferring attributes.
+
+###### MeshShape
+
+* 开启则使用MeshShape传递UV，不改变物体属性，通过修改MeshShape的方式传递，这种方法是本插件旧版本使用的方法
+* If enabled, use MeshShape to transfer UV, without changing object properties, by modifying MeshShape, this method is the method used by the old version of this plug-in
 
 </br>
 
@@ -269,10 +282,20 @@ mtor.open_tool_window()
 ---
 
 ## Updatelog - 更新日志
-##### V2.2.4  最新
+##### V2.3.0  最新
+* 更新Uv传递的方式为替换物体、属性传递、MeshShape，详细说明可以看文档中的UV传递模式
+* 推荐2.2.2以前版本升级此版本，而2.2.3 - 2.2.4版本必升此版本，否则可能经典传递传递导致崩溃，具体原因可以看文档中的UV传递模式
+
+##### V2.3.0 Latest
+* The way to update the Uv transfer is to replace the object, attribute transfer, MeshShape. For details, see the UV transfer mode in the document
+* It is recommended to upgrade this version from the previous version 2.2.2, and the version 2.2.3 - 2.2.4 must be upgraded to this version, otherwise the classic transfer transfer may cause a crash. For the specific reason, please refer to the UV transfer mode in the document.
+
+</br>
+
+##### V2.2.4
 * 修复中文路径无法传递BUG
 
-##### V2.2.4 Latest
+##### V2.2.4
 * Fix the bug that the Chinese path cannot be passed
 
 </br>
