@@ -3,7 +3,7 @@
       <meta charset="utf-8">
       <meta name="viewport" content="width=device-width, initial-scale=1.0">
       
-      <link rel="stylesheet" href="file:///c:\Users\Administrator\.vscode\extensions\shd101wyy.markdown-preview-enhanced-0.6.2\node_modules\@shd101wyy\mume\dependencies\katex\katex.min.css">
+      <link rel="stylesheet" href="file:///c:\Users\Administrator\.vscode\extensions\shd101wyy.markdown-preview-enhanced-0.6.3\node_modules\@shd101wyy\mume\dependencies\katex\katex.min.css">
       
       
       
@@ -266,12 +266,16 @@ pre[data-line] .line-highlight[data-end]:after {
 <p>This is a tool that can split UVs between RizomUVs and Maya in real time.</p>
 <img src="images/demo.webp">
 <br>
+<p>It can perfectly solve the problem of data loss after Rizomuv exports FBX in Maya</p>
+<img src="images/FileDataCache.gif">
+<br>
 <hr>
 <h2 class="mume-header" id="features">Features</h2>
 
 <ul>
 <li>Convenient <code>interactive UV split</code> function</li>
 <li>Unique &apos;bidirectional UV transmission&apos; function</li>
+<li><code>File data cache system</code> developed with C++</li>
 <li>The tool saves the operation of importing and exporting each other, <code>fast and efficient</code></li>
 <li>Edit and preview <code>sync</code>, WYSIWYG</li>
 <li>The model can automatically transfer UVs just by saving, <code>high production efficiency and small error probability</code></li>
@@ -300,11 +304,21 @@ pre[data-line] .line-highlight[data-end]:after {
 </ol>
 <br>
 <img src="images/2321322121215.webp">
-<h3 class="mume-header" id="manual-installation">Manual installation</h3>
+<h3 class="mume-header" id="manual-installation-1">Manual installation 1</h3>
 
 <ol>
 <li>Click <strong>install.cmd</strong> in the MayaToRizomUV folder to install</li>
 <li>Find the modules folder in the MayaToRizomUV folder and copy it to the Maya folder in My Documents</li>
+</ol>
+<br>
+<h3 class="mume-header" id="manual-installation-2">Manual installation 2</h3>
+
+<pre class="language-text">+ MayaToRizomUV 2.3.0 your installation directory\MayaToRizomUV 
+</pre>
+<ol>
+<li>Find the module folder in the ToRizomUV folder, create a new text, enter it, and replace the installation path</li>
+<li>Save the file name as MayaToRizomUV.mod</li>
+<li>Copy to the Maya folder in My Documents</li>
 </ol>
 <br>
 <hr>
@@ -335,10 +349,15 @@ pre[data-line] .line-highlight[data-end]:after {
 <li>Set Rizomuv path</li>
 </ul>
 <ol>
-<li>Click &#x51FB;Edit-Preferences</li>
+<li>Click Edit-Preferences</li>
 <li>Click ... to open RizomUV.exe startup file selection</li>
 <li>Click Ok after setting</li>
 </ol>
+<br>
+<h3 class="mume-header" id="notice">Notice</h3>
+
+<pre class="language-text">If you turn on the file data cache cache system, you can use to clear the cache when you encounter Rizomuv flash.
+</pre>
 <br>
 <hr>
 <img src="images/M4JAJYXA9W.webp">
@@ -488,26 +507,70 @@ selected shell</li>
 Such as fullAuto(&quot;pSphere*&quot;) <br>
 Refer to the syntax of maya&apos;s cmd to use</li>
 </ul>
+<hr>
 <br>
-<h4 class="mume-header" id="tools-can-access-independent-window-script-examples">Tools can access independent window script examples</h4>
+<img src="images/ac8z5-2mstj.webp">
+<h3 class="mume-header" id="preferences">Preferences</h3>
 
-<h5 class="mume-header" id="maya20175-2020">Maya2017.5 - 2020</h5>
+<h4 class="mume-header" id="options">Options</h4>
 
-<p>from mtor27 import mainwindow as mtor<br>
-mtor.open_tool_window()</p>
-<h5 class="mume-header" id="maya2022">Maya2022</h5>
+<h5 class="mume-header" id="rizomuvexe_path">RizomUV.exe_Path</h5>
 
-<p>from mtor37 import mainwindow as mtor<br>
-mtor.open_tool_window()</p>
-<h5 class="mume-header" id="maya2023">Maya2023</h5>
+<pre class="language-text">Automatically identify paths, which can be used to modify other Rizomuvs
+</pre>
+<h4 class="mume-header" id="filedatacachesystem">FileDataCacheSystem</h4>
 
-<p>from mtor37 import mainwindow as mtor<br>
-mtor.open_tool_window()</p>
+<h5 class="mume-header" id="use">Use</h5>
+
+<pre class="language-text">Turning on will affect performance, but Rizomuv information will be cached
+</pre>
+<h5 class="mume-header" id="max-filedatacache-count">Max FileDataCache Count</h5>
+
+<pre class="language-text">The more cache, the longer the query time
+</pre>
+<h4 class="mume-header" id="refersh">Refersh</h4>
+
+<pre class="language-text">Refresh Mtor reference nodes and unused rizomuv cache contents
+</pre>
+<h4 class="mume-header" id="clear-cache">Clear Cache</h4>
+
+<pre class="language-text">Clear rizomuv cache content
+</pre>
+<br>
+<hr>
+<h3 class="mume-header" id="tools-can-access-independent-window-script-examples">Tools can access independent window script examples</h3>
+
+<h4 class="mume-header" id="maya20175-2020">Maya2017.5 - 2020</h4>
+
+<pre class="language-text">from mtor27 import mainwindow as mtor
+mtor.open_tool_window()
+</pre>
+<h4 class="mume-header" id="maya2022">Maya2022</h4>
+
+<pre class="language-text">from mtor37 import mainwindow as mtor
+mtor.open_tool_window()
+</pre>
+<h4 class="mume-header" id="maya2023">Maya2023</h4>
+
+<pre class="language-text">from mtor39 import mainwindow as mtor
+mtor.open_tool_window()
+</pre>
 <br>
 <hr>
 <h2 class="mume-header" id="updatelog">Updatelog</h2>
 
-<h5 class="mume-header" id="v230-latest">V2.3.0 Latest</h5>
+<h5 class="mume-header" id="v300-latest">V3.0.0 Latest</h5>
+
+<ul>
+<li>Added file cache function to prevent data wills caused by accidental exit</li>
+<li>General function of manufacturing cache, use C to record information when exporting, record the information abandonment of RizomUV after FBX enters RizomUV and then enters RizomUV</li>
+<li>Fix the problem that the plugin cannot be opened using the IP address path</li>
+<li>Fix the problem that the configuration cannot take effect after modifying the Rizomuv path</li>
+<li>Fixed a bug that cannot be imported or exported within the group</li>
+<li>Optimize the code structure and export structure to improve the stability and speed of the program</li>
+</ul>
+<br>
+<h5 class="mume-header" id="v230">V2.3.0</h5>
 
 <ul>
 <li>The way to update the Uv transfer is to replace the object, attribute transfer, MeshShape. For details, see the UV transfer mode in the document</li>

@@ -1,11 +1,9 @@
 import maya.OpenMayaMPx as ompx
 import sys
 
-
 PyVersion = sys.version_info[0]
-if(PyVersion == 3):
+if PyVersion == 3:
     PySubVersion = sys.version_info[1]
-    from importlib import reload
     if PySubVersion == 7:
         try:
             from ..mtor37 import mainwindow as mtor
@@ -22,8 +20,6 @@ else:
     except:
         from mtor27 import mainwindow as mtor
 
-reload(mtor)
-
 
 def initializePlugin(mobject):
     """
@@ -35,8 +31,15 @@ def initializePlugin(mobject):
     :param plugin: MObject used to register the plugin using an MFnPlugin function set
     """
     vendor = "Steven Qiu"
-    version = "2.3.0"
+    version = "3.0.0"
     mplugin = ompx.MFnPlugin(mobject, vendor, version)
+    try:
+        import pymel.core as pm
+    except:
+        if PyVersion == 3:
+            raise RuntimeError("Please install PyMel3 before using!")
+        else:
+            raise RuntimeError("Please install PyMel before using!")
     mtor.initialize()
 
 
