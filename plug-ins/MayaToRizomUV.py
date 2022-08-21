@@ -31,7 +31,7 @@ def initializePlugin(mobject):
     :param plugin: MObject used to register the plugin using an MFnPlugin function set
     """
     vendor = "Steven Qiu"
-    version = "3.0.0"
+    version = "3.0.2"
     mplugin = ompx.MFnPlugin(mobject, vendor, version)
     try:
         import pymel.core as pm

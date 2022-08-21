@@ -261,7 +261,110 @@ pre[data-line] .line-highlight[data-end]:after {
     </head>
     <body for="html-export">
       <div class="mume markdown-preview  ">
-      <h1 class="mume-header" id="what-is-mayatorizomuv">What is MayaToRizomUV?</h1>
+      <ul>
+<li><a href="#what-is-mayatorizomuv">What is MayaToRizomUV?</a>
+<ul>
+<li><a href="#features">Features</a></li>
+<li><a href="#installation">Installation</a>
+<ul>
+<li><a href="#when-using-maya2022-and-maya2023-you-need-to-install-pymel3-when-installing-maya">When using Maya2022 and Maya2023, you need to install PyMel3 when installing Maya</a></li>
+<li><a href="#automatic-installation">Automatic installation</a></li>
+<li><a href="#manual-installation-1">Manual installation 1</a></li>
+<li><a href="#manual-installation-2">Manual installation 2</a></li>
+</ul>
+</li>
+<li><a href="#usage">Usage</a><br>
+- <a href="#specifically-search-for-mayatorizomuv-in-youtube">Specifically search for mayatorizomuv in YouTube</a>
+<ul>
+<li><a href="#first-use">First use</a></li>
+<li><a href="#notice">Notice</a></li>
+<li><a href="#send-link-stop-linking">Send Link / Stop Linking</a></li>
+<li><a href="#push">Push</a><br>
+- <a href="#shortcut-ctrl-alt-1">Shortcut: Ctrl + Alt + 1</a></li>
+<li><a href="#pull">Pull</a><br>
+- <a href="#shortcut-ctrl-alt-1-1">Shortcut: Ctrl + Alt + 1</a></li>
+<li><a href="#uvtool">UVTool</a>
+<ul>
+<li><a href="#autocut">AutoCut</a></li>
+<li><a href="#autounfold">AutoUnfold</a></li>
+<li><a href="#autolayout">AutoLayout</a></li>
+<li><a href="#autooptimize">AutoOptimize</a></li>
+<li><a href="#autoalign">AutoAlign</a></li>
+<li><a href="#autostack">AutoStack</a></li>
+<li><a href="#autostaighten">AutoStaighten</a></li>
+<li><a href="#autolightmap">AutoLightmap</a></li>
+<li><a href="#fullauto">FullAuto</a>
+<ul>
+<li><a href="#shortcut-ctrl-alt-1-2">Shortcut: Ctrl + Alt + 1</a></li>
+</ul>
+</li>
+</ul>
+</li>
+<li><a href="#mayatool">MayaTool</a>
+<ul>
+<li><a href="#select-uvedge">Select UVEdge</a></li>
+<li><a href="#select-hardedge">Select HardEdge</a></li>
+<li><a href="#select-similar">Select Similar</a></li>
+<li><a href="#transfer-sectionuv">Transfer SectionUV</a></li>
+<li><a href="#livelink">LiveLink</a></li>
+<li><a href="#bidirectional-updatebeta">Bidirectional Update(Beta)</a></li>
+<li><a href="#uv-mode">UV Mode</a>
+<ul>
+<li><a href="#replace">Replace</a></li>
+<li><a href="#attribute">Attribute</a></li>
+<li><a href="#meshshape">MeshShape</a></li>
+</ul>
+</li>
+<li><a href="#scrpit">Scrpit</a></li>
+</ul>
+</li>
+<li><a href="#preferences">Preferences</a>
+<ul>
+<li><a href="#options">Options</a>
+<ul>
+<li><a href="#rizomuvexe_path">RizomUV.exe_Path</a></li>
+</ul>
+</li>
+<li><a href="#filedatacachesystem">FileDataCacheSystem</a>
+<ul>
+<li><a href="#use">Use</a></li>
+<li><a href="#max-filedatacache-count">Max FileDataCache Count</a></li>
+</ul>
+</li>
+<li><a href="#refersh">Refersh</a></li>
+<li><a href="#clear-cache">Clear Cache</a></li>
+</ul>
+</li>
+<li><a href="#tools-can-access-independent-window-script-examples">Tools can access independent window script examples</a>
+<ul>
+<li><a href="#maya20175-2020">Maya2017.5 - 2020</a></li>
+<li><a href="#maya2022">Maya2022</a></li>
+<li><a href="#maya2023">Maya2023</a></li>
+</ul>
+</li>
+</ul>
+</li>
+<li><a href="#updatelog">Updatelog</a><br>
+- <a href="#v302-latest">V3.0.2 Latest</a><br>
+- <a href="#v301">V3.0.1</a><br>
+- <a href="#v300">V3.0.0</a><br>
+- <a href="#v230">V2.3.0</a><br>
+- <a href="#v224">V2.2.4</a><br>
+- <a href="#v223">V2.2.3</a><br>
+- <a href="#v222">V2.2.2</a><br>
+- <a href="#v221">V2.2.1</a><br>
+- <a href="#v220">V2.2.0</a><br>
+- <a href="#v202242504">V2022.4.25.04</a><br>
+- <a href="#v202242316">V2022.4.23.16</a><br>
+- <a href="#v202141002">V2021.4.10.02</a><br>
+- <a href="#v2020111201">v2020.111201</a><br>
+- <a href="#v2020110503">v2020.110503</a><br>
+- <a href="#v2020082702">v2020.082702</a><br>
+- <a href="#v2020082201">v2020.082201</a></li>
+</ul>
+</li>
+</ul>
+<h1 class="mume-header" id="what-is-mayatorizomuv">What is MayaToRizomUV?</h1>
 
 <p>This is a tool that can split UVs between RizomUVs and Maya in real time.</p>
 <img src="images/demo.webp">
@@ -559,7 +662,13 @@ mtor.open_tool_window()
 <hr>
 <h2 class="mume-header" id="updatelog">Updatelog</h2>
 
-<h5 class="mume-header" id="v300-latest">V3.0.0 Latest</h5>
+<h5 class="mume-header" id="v302-latest">V3.0.2 Latest</h5>
+
+<ul>
+<li>Fix the problem that the configuration file cannot be saved</li>
+</ul>
+<br>
+<h5 class="mume-header" id="v301">V3.0.1</h5>
 
 <ul>
 <li>Fix the bug that cannot be opened</li>
@@ -697,53 +806,6 @@ mtor.open_tool_window()
 <li>Add selection and global mode for automation tools</li>
 <li>Fix AutoLink partial delivery failure</li>
 </ul>
-<br>
-<hr>
-<br>
-<h2 class="mume-header" id="contact">Contact</h2>
-
-<p>If you have any questions in use, please give me feedback, you can communicate with me using the following contact information</p>
-<ul>
-<li>Email : <a href="mailto:32229170@qq.com">32229170@qq.com</a></li>
-<li>YouTube : <a href="https://www.youtube.com/channel/UCSwqj6r0rUDeGH42DmlwhrA">https://www.youtube.com/channel/UCSwqj6r0rUDeGH42DmlwhrA</a></li>
-<li>WeChat public account : 3DTech</li>
-<li>QQ Group: 76031183</li>
-</ul>
-<br>
-<h2 class="mume-header" id="doc">Doc</h2>
-
-<ul>
-<li>Latest update : <a href="https://www.jianshu.com/p/d82f2b21b05a">https://www.jianshu.com/p/d82f2b21b05a</a></li>
-<li>User Help : <a href="https://www.jianshu.com/p/000663862bec">https://www.jianshu.com/p/000663862bec</a></li>
-<li>Tool demo: <a href="https://www.jianshu.com/p/bcbdc83c1a65">https://www.jianshu.com/p/bcbdc83c1a65</a></li>
-<li>GitHub: <a href="https://github.com/3DTech-Steven7/MayaToRizomuv">https://github.com/3DTech-Steven7/MayaToRizomuv</a></li>
-</ul>
-<br>
-<h2 class="mume-header" id="donor-developer">Donor developer</h2>
-
-<p>Driven by interest, writing a <code>free</code> thing, there is joy and sweat, I hope you like my work, and you can also support it.</p>
-<br>
-<h2 class="mume-header" id="authors-and-acknowledgment">Authors and acknowledgment</h2>
-
-<p>Thanks for the following, in no particular order</p>
-<ul>
-<li>Wo Dong</li>
-<li>Yu Zecheng</li>
-<li>Liu Chao</li>
-<li>chenclean</li>
-<li>The dead is comin</li>
-<li>Banana Orange Watermelon Juice</li>
-<li>Beihai Gongjin</li>
-<li>Jin Wangbin</li>
-</ul>
-<br>
-<h2 class="mume-header" id="license">License</h2>
-
-<p>The project is licensed under the GNU General Public License v3.0, see <a href="http://LICENSE.md">LICENSE.md</a> for details</p>
-<br>
-<h2 class="mume-header" id="about-the-author">About the author</h2>
-
-<p>Steven7</p>
 
       </div>
       
