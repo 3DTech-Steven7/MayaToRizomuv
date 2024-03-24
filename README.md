@@ -62,6 +62,9 @@ It can perfectly solve the problem of data loss after Rizomuv exports FBX in May
 ---
 
 ## Updatelog - 更新日志
+### 由于2022年的相关版本更新源码遗失，Maya2024后将不再更新!Maya2024的版本是V2021.4.10.02版本，所以出现bug敬请谅解QAQ
+### Due to the loss of the relevant version update source code in 2022, Maya will not be updated after 2024! Maya2024 version is V2021.4.10.02 version, so please understand the bug
+
 ##### V3.0.2 最新
 * 修复配置文件无法保存的问题
 

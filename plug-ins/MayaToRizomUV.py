@@ -14,6 +14,11 @@ if PyVersion == 3:
             from ..mtor39 import mainwindow as mtor
         except:
             from mtor39 import mainwindow as mtor
+    elif PySubVersion == 10:
+        try:
+            from ..mtor310 import mainwindow as mtor
+        except:
+            from mtor310 import mainwindow as mtor
 else:
     try:
         from ..mtor27 import mainwindow as mtor
